@@ -1,0 +1,142 @@
+$primary-bg-color: FCFEFD;
+$font-color: black;
+
+.navbar {
+  background-color: $primary-bg-color;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+
+  
+  .nvs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+   
+    .profile-dropdown {
+      border-radius: 5px;
+      top: 4rem;
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      position: absolute;
+      right: 2rem;
+      width: 12rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+      .dropdown-item {
+        padding: 0.75rem 1rem;
+        color: #374151;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.2s ease;
+        margin-left: 0px;
+        
+  
+        &:hover {
+          background-color: #f3f4f6;
+        }
+      }}
+
+    
+  }
+  
+
+  .fa-bars{
+    display: none;
+   }
+
+ 
+}
+
+.logo {
+  a {
+    text-decoration: none;
+    color: $font-color;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.menu-items {
+  display: flex;
+  margin: 20px;
+ 
+
+  a {
+    text-decoration: none;
+    color: $font-color;
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    
+    .order-button{
+  
+      padding: 30px 30px;
+      border-radius: 5px;
+        color: aliceblue;
+    }
+
+   
+      
+  }
+
+  
+
+  
+  // Add media query for mobile devices to hide the menu items
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.order-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+// Add media query for mobile devices to show the menu icon
+@media only screen and (max-width: 768px) {
+  .menu-items {
+    display: none;
+
+    &.show {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: $primary-bg-color;
+      padding: 10px;
+      border-radius: 5px;
+
+      a {
+        margin: 5px 0;
+      }
+    }
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+
+
+.menu-items{
+    display: block;
+}
+
+
+

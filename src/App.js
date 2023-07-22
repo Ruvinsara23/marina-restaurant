@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { Outlet } from 'react-router-dom';
+import { Route,Routes } from 'react-router-dom';
+import Homepage from './routers/home/home.component';
+import React from 'react'
+import Navbar from './routers/navBar/navBar.component';
+
+
+
+const Shop = () => {
+  return (
+    <div>
+      <div>
+        <h1>This the nav shop
+        background-color: $primary-bg-color;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 10px 20px;
+        font-size: 16px;
+      
+        </h1>
+      </div>
+      <Outlet />
+    </div>
+  )
+}
+
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+       <Route path='/' element={<Navbar />}>
+        <Route  index element={<Homepage />} />
+        <Route path='/shop' element={<Shop />} />
+       </Route>
+    </Routes>
   );
 }
 
