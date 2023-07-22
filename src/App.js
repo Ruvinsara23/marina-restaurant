@@ -1,12 +1,13 @@
-import { Outlet } from 'react-router-dom';
+
 import { Route,Routes } from 'react-router-dom';
 import Homepage from './routers/home/home.component';
 import React from 'react'
 import Navbar from './routers/navBar/navBar.component';
+import SignIn from './routers/signIn/SignIn';
 
 
 
-const Shop = () => {
+const Menu = () => {
   return (
     <div>
       <div>
@@ -20,7 +21,6 @@ const Shop = () => {
       
         </h1>
       </div>
-      <Outlet />
     </div>
   )
 }
@@ -35,7 +35,8 @@ function App() {
     <Routes>
        <Route path='/' element={<Navbar />}>
         <Route  index element={<Homepage />} />
-        <Route path='/shop' element={<Shop />} />
+        <Route path='/menu' element={<Menu />} />
+        <Route path='/sign-in' element={<SignIn  />} />
        </Route>
     </Routes>
   );

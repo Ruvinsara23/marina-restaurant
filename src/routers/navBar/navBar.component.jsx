@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { FiUser, FiShoppingCart } from 'react-icons/fi';
 import './nav.styles.scss'
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -16,37 +16,37 @@ const Navbar = () => {
     }
   
     return (
-      <header>
+      <Fragment>
         <nav className="navbar">
           <div className="logo">
-            <a href="/"> Logo</a>
+            <Link href="/"> Logo</Link>
           </div>
           <div className='nvs'> 
           <div className={`menu-items ${showMenu ? 'show' : ''}`}>
-            <a href="/">Home</a>
-            <a href="/about-us">About Us</a>
-            <a href="/menu">Menu</a>
-            <a href="/cart">
+            <Link to="/">Home</Link>
+            <Link to="/about-us">About Us</Link>
+            <Link to="/menu">Menu</Link>
+            <Link to="/cart">
               <i className="fa fa-shopping-cart"></i> <FiShoppingCart />
-            </a>
-            <a href="#" onClick={toggleProfile}>
+            </Link>
+            <Link to="#" onClick={toggleProfile}>
               <i className="fa fa-user" ></i> <FiUser  />
               {profile && (
                 <div className="profile-dropdown">
-                  <a href="/user-profile" className='dropdown-item'>Your profile</a>
-                  <a href="/sign-in" className='dropdown-item'>SignIn</a>
+                  <Link to="/user-profile" className='dropdown-item'>Your profile</Link>
+                  <Link to="/sign-in" className='dropdown-item'>SignIn</Link>
                 </div>
               )}
-            </a>
+            </Link>
           </div>
-          <a href="/order" className="order-button">Order Now</a>
+          <Link to="/order" className="order-button">Order Now</Link>
           <div className="menu-icon" onClick={toggleMenu}>
           <i className="fa-bars">hello</i>
             </div>
           </div>
         </nav>
         <Outlet />
-      </header>
+      </Fragment>
     );
 };
 
