@@ -40,3 +40,23 @@
         color: #0c0c0c;
       }
 }
+
+
+
+@media only screen and (max-width: 768px){
+
+    .fearturecard{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 300px;
+    
+        img{
+            max-width: 100px;
+            height: auto;
+        }
+
+
+}
+}

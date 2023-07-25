@@ -4,26 +4,11 @@ import Homepage from './routers/home/home.component';
 import React from 'react'
 import Navbar from './routers/navBar/navBar.component';
 import SignIn from './routers/signIn/SignIn';
+import Menu from './routers/menu/menu';
 
 
 
-const Menu = () => {
-  return (
-    <div>
-      <div>
-        <h1>This the nav shop
-        background-color: $primary-bg-color;
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-        padding: 10px 20px;
-        font-size: 16px;
-      
-        </h1>
-      </div>
-    </div>
-  )
-}
+
 
 
 

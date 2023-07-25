@@ -1,0 +1,38 @@
+.menu-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .menu-item {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .image {
+    width: 200px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 10px;
+  
+    h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+  
+    p {
+      margin: 5px 0;
+    }
+  
+    .price {
+      font-weight: bold;
+    }
+  }

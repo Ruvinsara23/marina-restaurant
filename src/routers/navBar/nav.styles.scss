@@ -105,11 +105,19 @@ $font-color: black;
   font-weight: bold;
 }
 
-// Add media query for mobile devices to show the menu icon
+
+
+
+
 @media only screen and (max-width: 768px) {
+  .order-button{
+    display: none;
+  }
+  
   .menu-items {
     display: none;
 
+   
     &.show {
       display: flex;
       flex-direction: column;
@@ -136,6 +144,7 @@ $font-color: black;
 
 .menu-items{
     display: block;
+    
 }
 
 

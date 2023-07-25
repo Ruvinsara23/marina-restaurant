@@ -59,25 +59,21 @@ const SHOP_DATA = [
 
 
 const Bestselling = () => {
-    const generateProductCard = (product) => (
-        <div className="product-card" key={product.id}>
-          <img src={product.imageUrl} className='img' alt={product.name} />
-          <h3>{product.name}</h3>
-          <p>{product.description}</p>
+    const generateProductCard = ({id ,name,description,price,imageUrl}) => (
+        <div className="product-card" key={id}>
+          <img src={imageUrl} className='img' alt={name} />
+          <h3>{name}</h3>
+          <p>{description}</p>
           <div className="price-container">
-            <div className="price">LKR{product.price.toFixed(2)}</div>
-            <button className="add-to-cart" onClick={() => addToCart(product.id)}>
+            <div className="price">LKR{price.toFixed(2)}</div>
+            <button className="add-to-cart" onClick={()=>{}}>
               <i className="fa fa-cart-plus"></i> Add to cart
             </button>
           </div>
         </div>
       );
     
-      const addToCart = (productId) => {
-        // Implement the addToCart functionality here (not provided in the original code)
-        // For a simple example, you could just log the product ID:
-        console.log('Added to cart:', productId);
-      };
+    
     
       return (
         <div id="productContainer" className='product-container'>
