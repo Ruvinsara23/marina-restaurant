@@ -42,8 +42,8 @@ const Navbar = () => {
             <Link to="/cart">
               <i className="fa fa-shopping-cart"></i> <FiShoppingCart />
             </Link>
-            <div onClick={toggleProfile}>
-              <i className="fa fa-user"></i> <FiUser />
+            <Link onClick={toggleProfile}>
+              <i className="fa fa-user"  ></i> <FiUser />
               {profile && (
                 <div className="profile-dropdown">
                   <Link to="/user-profile" className="dropdown-item">
@@ -60,7 +60,7 @@ const Navbar = () => {
                   )}
                 </div>
               )}
-            </div>
+            </Link>
           </div>
           <Link to="/order" className="order-button">
             Order Now

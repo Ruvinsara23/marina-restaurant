@@ -1,8 +1,14 @@
 import React from 'react'
-import MenuItem from './MenuItems';
+import ProducCard from '../../components/product-card/product-card';
+import { useContext,Fragment } from 'react';
+import { ProductsContext } from '../../contexts/products.context';
+import { Tab } from '@headlessui/react';
+import './menu.scss'
 
 
-const SHOP_DATA = [
+
+
+export const SHOP_DATA = [
   {
     title: 'Indian food',
     items: [
@@ -309,78 +315,60 @@ const SHOP_DATA = [
     ],
   },
   
-  {
-    title: 'Dessert',
-    items: [
-      {
-          id: 1,
-          name: 'Fresh-Fruit-Salad',
-          imageUrl: 'https://i.ibb.co/NnB2NfJ/Fresh-Fruit-Salad.png',
-          price: 350.00,
-          description:'Variety of ripe and juicy fresh fruits, offering a naturally sweet and healthy treat for a delightful finish to any meal.'
-        },
-      
-      {
-        id: 2,
-        name: 'Chocolate-Mousse',
-        imageUrl: 'https://i.ibb.co/Z1yk9s7/Chocolate-Mousse.png',
-        price: 350.00,
-        description: 'Smooth chocolate cream, topped with whipped cream or chocolate shavings, providing a rich and indulgent treat.'
-      },
-      {
-          id: 3,
-          name: 'Cream-Caramel',
-          imageUrl: 'https://i.ibb.co/jHLj0FM/Cream-Caramel.png',
-          price: 350.00,
-  description:'Luscious layer of caramelized sugar on the bottom, topped with a creamy custard, offering a delightful and silky sweet treat.'
-        },
-        {
-          id: 4,
-          name: 'Gulab-Jamun',
-          imageUrl: 'https://i.ibb.co/bR86PVw/Gulab-Jamun.png',
-          price: 350.00,
-  description:'Soft, deep-fried dumplings soaked in a fragrant sugar syrup, offering a delightful and syrupy-sweet indulgence.'
-        },
-        {
-          id: 5,
-          name: 'Mango-Pudding',
-          imageUrl: 'https://i.ibb.co/GT3g2KN/Mango-Pudding.png',
-          price: 350.00,
-  description:'Ripe mango puree, milk or cream, sugar, and gelatin, resulting in a smooth and fruity treat perfect for mango lovers.'
-        },
-        {
-          id: 6,
-          name: 'Chilled-Sago-With-Honey-Cream',
-          imageUrl: 'https://i.ibb.co/25g6jkm/Chilled-Sago-With-Honey-Cream.png',
-          price: 350.00,
-          description: 'Sago pearls soaked in sweetened coconut milk and served with a drizzle of honey-infused cream, offering a delightful and creamy treat.'
-        },
-   
-    ],
-  },
-  
-  
-  
+ 
 ];
 
 
 
 
+
 const Menu = () => {
+  const { products } = useContext(ProductsContext);
   return (
-    <div className="menu-container">
-    <h1>Restaurant Menu</h1>
-    {SHOP_DATA.map((category) => (
-      <div key={category.title}>
-        <h2>{category.title}</h2>
-        <div className="menu-items">
-          {category.items.map((item) => (
-            <MenuItem key={item.id} item={item} />
-          ))}
-        </div>
-      </div>
-    ))}
+
+<div className='menu-container'>
+    <Tab.Group>
+    <Tab.List className="tab-list">
+      {products.map((category) => (
+        <Tab key={category.title} as={Fragment}>
+          {({ selected }) => (
+            <button
+              className={`tab-item ${selected ? 'active' : ''}`}
+              onClick={() => {}}
+            >
+              {category.title}
+            </button>
+          )}
+        </Tab>
+      ))}
+    </Tab.List>
+    <Tab.Panels>
+      {products.map((category) => (
+        <Tab.Panel key={category.title} className="tab-panel">
+          <div className="menu-items">
+            {category.items.map((item) => (
+              <ProducCard key={item.id} item={item}  />
+            ))}
+          </div>
+        </Tab.Panel>
+      ))}
+    </Tab.Panels>
+  </Tab.Group>
+  
   </div>
+  //   <div className="menu-container">
+  //   <h1>Restaurant Menu</h1>
+  //   {SHOP_DATA.map((products) => (
+  //     <div key={products.title}>
+  //       <h2>{products.title}</h2>
+  //       <div className="menu-items">
+  //         {products.items.map((item) => (
+  //           <ProducCard key={item.id} item={item} />
+  //         ))}
+  //       </div>
+  //     </div>
+  //   ))}
+  // </div>
   )
 }
 
