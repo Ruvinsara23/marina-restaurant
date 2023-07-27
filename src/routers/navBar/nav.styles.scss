@@ -9,11 +9,33 @@ $font-color: black;
   padding: 10px 20px;
   font-size: 16px;
 
+
+
   
   .nvs{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
+
+
+    .Link-container{
+      display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+    }
+
+    .cart-user-container{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    gap:5px;
+    margin-right: 20px;
+    }
+    
 
    
     .profile-dropdown {
@@ -64,7 +86,7 @@ $font-color: black;
 
 .menu-items {
   display: flex;
-  margin: 20px;
+  margin: 5px;
  
 
   a {

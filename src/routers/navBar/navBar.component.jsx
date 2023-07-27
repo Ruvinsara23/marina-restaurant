@@ -4,11 +4,16 @@ import './nav.styles.scss'
 import { Link, Outlet } from 'react-router-dom';
 import { UserContext } from '../../contexts/user.context';
 import { signOutUser } from '../../utils/firebase.utils';
+import CartIcon from '../../components/cart-Icon/cart-icon';
+import CartDropdown from '../../components/cart-dropdown/cart-dropdown';
+import { CartContext } from '../../contexts/cart.context';
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [profile ,setprofile] =useState(false);
     const {currentUser, setCurrentUser }=useContext( UserContext);
+    const {isCartOpen}= useContext(CartContext);
+    
       
 
     console.log(currentUser )
@@ -35,13 +40,16 @@ const Navbar = () => {
           <Link to="/">Logo</Link>
         </div>
         <div className="nvs">
+        <div className='Link-container'>
           <div className={`menu-items ${showMenu ? 'show' : ''}`}>
             <Link to="/">Home</Link>
             <Link to="/about-us">About Us</Link>
-            <Link to="/menu">Menu</Link>
-            <Link to="/cart">
-              <i className="fa fa-shopping-cart"></i> <FiShoppingCart />
+            <Link to="/menu">Menu</Link></div>
+            <div className='cart-user-container'>
+            <Link >
+            <CartIcon  />
             </Link>
+            {isCartOpen && <CartDropdown />}
             <Link onClick={toggleProfile}>
               <i className="fa fa-user"  ></i> <FiUser />
               {profile && (
@@ -61,6 +69,7 @@ const Navbar = () => {
                 </div>
               )}
             </Link>
+          </div>
           </div>
           <Link to="/order" className="order-button">
             Order Now
