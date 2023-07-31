@@ -1,3 +1,4 @@
+// PaymentDetails.scss
 $sub-color: grey;
 $main-color: black;
 
@@ -120,36 +121,4 @@ $main-color: black;
       @include shrinkLabel();
     }
   }
-  .tot-container{
-    display: flex;
-    margin:10px;
-    flex-direction: column;
-    
-    .labletot{
-       display: flex;
-       justify-content: space-between;
-       margin: 10px;
-       gap: 20px;
-    }
-
-    
-    
-  }
-
-  .pay-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: #0056b3;
-    }
-  }
-  
 }

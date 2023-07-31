@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react';
-import { SHOP_DATA } from '../routers/menu/menu';
+import { SHOP_DATA } from '../routers/menu/menu.component';
 
 export const ProductsContext = createContext({
   products: [],

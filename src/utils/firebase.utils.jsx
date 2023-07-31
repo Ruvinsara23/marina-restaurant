@@ -52,6 +52,7 @@ const firebaseConfig = {
     if (!userSnapshot.exists()) {
       const { displayName, email } = userAuth;
       const createdAt = new Date();
+      
   
       try {
         await setDoc(userDocRef, {
