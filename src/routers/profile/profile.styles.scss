@@ -7,7 +7,7 @@ $main-color: black;
   color: $main-color;
 }
 
-.sign-up-container{
+.profile-container{
  
   position: relative;
   margin: 45px;
@@ -153,3 +153,21 @@ $main-color: black;
   }
   
 }
+
+@media only screen and (max-width: 768px) {
+
+
+
+    .profile-container{
+      margin:25px;
+      display: flex;
+      flex-direction: column;
+      align-items:flex-start;
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      max-width: 650px;
+      width: 75%;
+    }
+    
+  }

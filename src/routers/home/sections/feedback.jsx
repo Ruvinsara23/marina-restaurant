@@ -53,7 +53,7 @@ const Feedback = () => {
   const generateFeedbackCard = ({ img, name, content, id }) => {
     return (
       <div className='fcard' key={id}>
-        <div className='profile-container'>
+        <div className='profileimg-container'>
           <img src={img} alt='profile' />
           <div className='name-container'>
             <p>{name}</p>

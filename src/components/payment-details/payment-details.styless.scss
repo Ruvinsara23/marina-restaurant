@@ -8,15 +8,15 @@ $main-color: black;
   color: $main-color;
 }
 
-.sign-up-container{
+.payment-details{
  
   position: relative;
   margin: 45px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   background-color: #fff;
-  padding: 10px;
+  padding: 3rem;
   border-radius: 10px;
   max-width: 500px;
   width: 100%;
@@ -24,6 +24,7 @@ $main-color: black;
 
   form{
     margin-top: 20px;
+    width: 450px;
 
 .button-container{
     display: flex;
@@ -32,42 +33,9 @@ $main-color: black;
     margin: 20px;
 
     
-    .sign-up{
-        color: #f3f3f3;
-        border-radius: 10px;
-        background: #000000;
-        padding:15px ;
-        font-size: 16px ;
-        // border-color: #000000;
-        width: 160px;  
-        margin-left: 20px;
-        margin-bottom: 30px;
-        border-radius: 20px;
 
-    }
 
-    .google-signin-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #fff;
-        border: 1px solid #000000;
-        border-radius: 20px;
-        padding: 10px 20px;
-        color: #333;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    
-        &:hover {
-          background-color: #f9f9f9;
-        }
-    
-        .google-logo {
-          width: 24px;
-          height: 24px;
-          margin-right: 10px;
-        }
+
       }
     
 }
@@ -76,9 +44,10 @@ $main-color: black;
 
   }
   span{
-    margin-left:20px ;
+    margin-left:0px ;
   }
  
+  
   input {
     background: none;
     background-color: white;
@@ -99,17 +68,34 @@ $main-color: black;
     &:focus ~ .form-input-label {
       @include shrinkLabel();
     }
+
+   
   }
 
-  input[type='password'] {
-    letter-spacing: 0.3em;
-  }
+  .pay-button{
+    color: #eaeeec;
+    border-radius: 10px;
+    background: #070707;
+    padding:15px ;
+    font-size: 14px ;
+    width: 160px;
+    margin-left: 20px;
+    align-self: center;
 
-  .form-input-label {
-    color: $sub-color;
+    &:hover {
+        background-color: #05C066;
+        color: #070707;
+        border: 0px;
+      }
+}
+
+
+
+  label {
+    color: black;
     font-size: 16px;
     font-weight: normal;
-    position: absolute;
+
     pointer-events: none;
     left: 5px;
     top: 10px;
@@ -120,5 +106,52 @@ $main-color: black;
     &.shrink {
       @include shrinkLabel();
     }
+
+  
   }
+
+  
+  .tot-container{
+        
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    width:300px;
+
+    .labletot{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+    }
+}
+
+  @media only screen and (max-width: 768px) {
+
+
+
+    .payment-details{
+      margin:25px;
+      display: flex;
+      flex-direction: column;
+      align-items:flex-start;
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      max-width: 650px;
+      width: 75%;
+
+      form{
+        margin-top: 20px;
+        width: 275px;}
+    }
+    .tot-container{
+    
+        height: 100px;
+        width:250px;
+    
+  }
+  
 }

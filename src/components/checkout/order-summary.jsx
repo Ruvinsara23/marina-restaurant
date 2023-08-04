@@ -8,6 +8,8 @@ import CheckoutItem from '../checkout-item/checkout-item.component';
 const OrderSummary = () => {
     const { cartItems,addItemToCart } =useContext(CartContext)
 
+    console.log("This is cart item",cartItems);
+
   return (
     <div className='Order-summary-container'>
     <h2>Sammary Order </h2>

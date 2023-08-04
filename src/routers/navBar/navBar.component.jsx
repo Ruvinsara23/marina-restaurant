@@ -16,7 +16,7 @@ const Navbar = () => {
     
       
 
-    console.log(currentUser )
+    console.log("current user in nav",currentUser)
 
 
     const signOutHandler= async()=>{await  signOutUser()

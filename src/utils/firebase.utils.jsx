@@ -7,10 +7,12 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  onAuthStateChanged
+  onAuthStateChanged,
+ 
 
 } from 'firebase/auth';
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, setDoc, } from 'firebase/firestore';
+import firebase from 'firebase/compat/app';import 'firebase/compat/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyBWa3fhXO_lspvcoKtnJoKdpokYLugiK5E",
@@ -22,7 +24,12 @@ const firebaseConfig = {
     measurementId: "G-8GSJR1W8YP"
   };
   
-  const firebaseApp = initializeApp(firebaseConfig);
+  export const firebaseApp = initializeApp(firebaseConfig);
+
+  firebase.initializeApp(firebaseConfig);
+
+ export const firestore = firebase.firestore();
+
 
   const googleProvider = new GoogleAuthProvider();
   
@@ -37,7 +44,7 @@ const firebaseConfig = {
   export const signInWithGoogleRedirect = () =>
     signInWithRedirect(auth, googleProvider);
   
-  export const db = getFirestore();
+  export const db = getFirestore(firebaseApp);
   
   export const createUserDocumentFromAuth = async (
     userAuth,
@@ -48,10 +55,15 @@ const firebaseConfig = {
     const userDocRef = doc(db, "users", userAuth.uid);
   
     const userSnapshot = await getDoc(userDocRef);
-  
+
+    // const address = userSnapshot.data().address;
+    // console.log(address);
+   console.log(userDocRef);
+     
     if (!userSnapshot.exists()) {
       const { displayName, email } = userAuth;
       const createdAt = new Date();
+      
       
   
       try {
@@ -59,8 +71,25 @@ const firebaseConfig = {
           displayName,
           email,
           createdAt,
+        address: additionalInformation.address || "", 
+        phoneNumber: additionalInformation.phoneNumber || "",
           ...additionalInformation,
         });
+
+        const newCollectionRef = doc(userDocRef, 'orderHistory', 'documentId');
+
+    
+        const orderDetails = {
+          orderId: '1', 
+          amount: 0, 
+          items: [],
+          timestamp: new Date(), 
+        };
+    
+    
+       
+       setDoc(newCollectionRef, orderDetails);
+      
       } catch (error) {
         console.log("error creating the user", error.message);
       }
@@ -85,3 +114,21 @@ const firebaseConfig = {
   export const signOutUser =async ()=> await signOut(auth)
 
   export const onAuthStateChangedListner=(callback)=>onAuthStateChanged(auth,callback)
+
+
+
+
+
+// export const checkData=async()=>{
+//   const docRef = doc(db, "users",);
+//   const docSnap = await getDoc(docRef);
+  
+//   if (docSnap.exists()) {
+//     console.log("Document data:", docSnap.data());
+//   } else {
+//     // docSnap.data() will be undefined in this case
+//     console.log("No such document!");
+//   }
+// }
+
+

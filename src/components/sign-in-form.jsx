@@ -4,7 +4,7 @@ import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
-  
+ 
 } from '../utils/firebase.utils';
 import './sign-in-form.style.scss'
 import google from '../assets/google.png'
@@ -29,7 +29,7 @@ const SignInForm = () => {
     setFormFields(defaultFormFields);
   };
 
- 
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -65,7 +65,7 @@ const SignInForm = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-
+    
     setFormFields({ ...formFields, [name]: value });
   };
 

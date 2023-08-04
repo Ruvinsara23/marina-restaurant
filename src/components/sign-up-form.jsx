@@ -10,7 +10,7 @@ import { UserContext } from '../contexts/user.context';
 
 
 const defaultFormFields={
-    displayName:'',
+  displayName:'',
     email:'',
     password:'',
     confirmPassword:'',
