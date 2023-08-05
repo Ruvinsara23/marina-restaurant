@@ -6,7 +6,7 @@ import InputMask from 'react-input-mask';
  import { getDocs,collection,updateDoc,doc } from 'firebase/firestore';
  import { UserContext } from '../../contexts/user.context';
  import { useContext } from 'react';
-
+import OrderHistoryComponent from '../../components/order-history/order-history';
 
 const defaultFormFields={
     displayName:'',
@@ -49,6 +49,8 @@ useEffect(()=>{
     }
    
     getDataList();
+
+ 
    
 },[currentUser])
 
@@ -56,7 +58,6 @@ const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      // Update the data in Firestore
       const userDocRef = doc(userDataCollection, currentUser.uid);
       await updateDoc(userDocRef, {
         displayName,
@@ -75,6 +76,7 @@ const handleSubmit = async (event) => {
 console.log("This user duser",filteredUser)
 
 
+
     const handleChange = (event) => {
         const { name, value } = event.target;
     
@@ -82,7 +84,7 @@ console.log("This user duser",filteredUser)
       };
  
   return (
-    <div>
+    <div className='profle-order-container'>
      
       <div className='profile-container'>
       <h1>Hi</h1>
@@ -128,7 +130,9 @@ console.log("This user duser",filteredUser)
     </div>
       </form>
       </div>
-
+    <div>
+    <OrderHistoryComponent />
+    </div>
     </div>
   )
 }

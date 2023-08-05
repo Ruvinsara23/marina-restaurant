@@ -1,0 +1,15 @@
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+.order-history-component{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    display:-webkit-flex;
+    border-radius: 10px;
+    width: 1000px;
+    height: 700px ;
+
+  }

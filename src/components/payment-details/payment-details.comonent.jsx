@@ -8,13 +8,13 @@ import StripeElement from './stripe-element/stripe-element.component';
 import { useState } from 'react';
 import PaymentSuccessPopup from '../payment-sucess-pop/payment-sucess-popup';
 import { firestore } from '../../utils/firebase.utils';
-import { getDocs,collection,updateDoc,doc } from 'firebase/firestore';
+import { getDocs,collection,updateDoc,doc,addDoc } from 'firebase/firestore';
 import { db } from '../../utils/firebase.utils';
 import { UserContext } from '../../contexts/user.context';
 
 
 
-
+ 
 const PaymentDetails = ({ emailAddress, cardNumber, cardHolderName, subtotal, deliveryCharges, total }) => {
 
   const {currentUser}=useContext( UserContext);
@@ -25,21 +25,38 @@ const PaymentDetails = ({ emailAddress, cardNumber, cardHolderName, subtotal, de
 
     const handlePayment = async(userAuth) => {
 
-      try {
-        // Update the data in Firestore
-        const userDocRef = doc(userDataCollection, currentUser.uid);
-        console.log("user doc ref b",userDocRef);
-        await updateDoc(userDocRef, 'orderHistory', {
-          orderId: '18', // Replace with the actual 
-          amount: cartTotal, // Replace with the actual payment amount
-          items: [{cartItems}],
-          timestamp: Date.now(), // Use the current timestamp as a unique identifier
-        });
+      const orderHistoryCollectionRef = collection(userDataCollection, currentUser.uid, 'orderHistory');
+const orderDetails = {
+  orderId: 1,
+  amount: cartTotal,
+  items: cartItems,
+  timestamp: Date.now(), 
+};
+
+try {
+
+  await addDoc(orderHistoryCollectionRef, orderDetails);
+  console.log('New document added successfully!');
+} catch (error) {
+  console.error('Error adding new document:', error);
+}
+
+      // try {
+      //   // Update the data in Firestore
+      //   const userDocRef = doc(userDataCollection, currentUser.uid, 'orderHistory/documentId');
+      //   console.log("user doc ref b",userDocRef);
+      //   await addDoc(userDocRef, {
+      //     orderId: '18', // Replace with the 
+      //       amount: cartTotal, // Replace with the actual payment amount
+      //       items: [{cartItems}],
+      //       timestamp: Date.now(),
+      //     // Use the current timestamp as a unique identifier
+      //   });
   
-        console.log("Data updated successfully!");
-      } catch (error) {
-        console.error("Error updating data:", error);
-      }
+      //   console.log("Data updated successfully!");
+      // } catch (error) {
+      //   console.error("Error updating data:", error);
+      // }
       // Add the orderDetails object to the 'orders' collection in Firestore
     //  await firestore.collection('users','orderHistory' ).add({orderDetails});
   

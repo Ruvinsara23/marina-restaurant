@@ -1,0 +1,102 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    min-width: 300px;
+    max-width: 300px;
+    width: 77%;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    margin: 20px;
+    flex-direction: column;
+
+   
+    .order-info {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      justify-content: space-between;
+      align-items: center;
+
+
+      .order-info-container{
+         display: flex;
+         flex-direction: column;
+      }
+  
+  
+      .order-id {
+        font-size: 18px;
+        font-weight: bold;
+      }
+  
+      .amount {
+        font-size: 16px;
+      }
+  
+      .timestamp {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  
+    .items-list {
+        .orderHistory-container{
+            margin-top: 20px;
+            width: 97%;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            overflow-y:scroll;
+            border-radius: 10px;
+            padding:15px ;
+            font-size: 16px ;
+             border:1px #000000;
+            border-radius: 20px;
+            display:-webkit-flex;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.986);
+        
+        }
+
+      .item {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 10px;
+  
+        .item-image {
+          width: 80px;
+          height: 80px;
+          border-radius: 8px;
+          overflow: hidden;
+  
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+  
+        .item-details {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          font-size: 14px;
+  
+          .item-name {
+            font-weight: bold;
+          }
+  
+          .item-price {
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+  
