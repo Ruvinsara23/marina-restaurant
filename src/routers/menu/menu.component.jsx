@@ -14,46 +14,96 @@ export const SHOP_DATA = [
     items: [
       {
           id: 1,
-          name: 'Murgh-65',
-          imageUrl: 'https://i.ibb.co/yPMgg0j/Murgh-65.png',
-          price: 450.00,
-          description:'A scrumptious combination of tender chicken ham, wholesome eggs, and a delectable pastry crust. A balanced and fulfilling option for any time of the day.'
+          name: 'Adraki-Aloo-Gobi',
+          imageUrl: 'https://i.ibb.co/drmLff2/Adraki-Aloo-Gobi.png',
+          price: 1350.00,
+          description:'Consisting of potatoes and cauliflower cooked with ginger and a blend of aromatic spices, resulting in a delicious and spiced vegetable medley.'
         },
       
       {
         id: 2,
-        name: 'Adraki-Aloo-Gobi',
-        imageUrl: 'https://i.ibb.co/myjmD9g/Adraki-Aloo-Gobi.png',
-        price: 100.00,
-        description: 'A delightful fusion of soft, pillowy bread filled with succulent fish and aromatic spices. Perfect as a quick and tasty snack or light meal option.'
+        name: 'Basmati-Chawal',
+        imageUrl: 'https://i.ibb.co/f9wgmyQ/Basmati-Chawal.png',
+        price: 1020.00,
+        description: 'Fragrant and flavorful long-grain rice, widely used in Indian and South Asian cuisines as a staple for its distinctive aroma and taste.'
       },
       {
           id: 3,
-          name: 'Jhinga-Pasinda-Seafood-Curry',
-          imageUrl: 'https://i.ibb.co/G0BYKgB/Jhinga-Pasinda-Seafood-Curry.png',
-          price: 100.00,
-  description:'A delightful fusion of soft, pillowy bread filled with succulent fish and aromatic spices. Perfect as a quick and tasty snack or light meal option.'
+          name: 'Chapathi',
+          imageUrl: 'https://i.ibb.co/9YcXfvp/Chapathi.png',
+          price: 560.00,
+  description:'Traditional flatbread from India made from whole wheat flour, commonly served as a staple accompaniment to various dishes.'
         },
         {
           id: 4,
-          name: 'Devilled Chicken Puff',
-          imageUrl: 'https://i.ibb.co/HHXy3dw/Devilled-Chicken-Puff.png',
-          price: 150.00,
-  description:'An irresistible blend of fish and Chinese-inspired spices wrapped in a crispy, golden-brown roll. Experience the harmonious flavors of the East in every crispy bite'
+          name: 'Dahi-Kebab',
+          imageUrl: 'https://i.ibb.co/ssJw5JL/Dahi-Kebab.png',
+          price: 1350.00,
+  description:'Vegetarian appetizer made from hung curd (yogurt), mixed with spices and herbs, formed into patties, and shallow-fried until golden and crispy.'
         },
         {
           id: 5,
-          name: 'Chicken Ham & Egg Pie',
-          imageUrl: 'https://i.ibb.co/qxM39s8/Chicken-Ham-Egg-Pie.png',
-          price: 150.00,
-  description:'A fiery and flavorful treat featuring spicy devilled chicken ensconced in a delicate puff pastry. For those who crave a zesty twist to their snacking experience.'
+          name: 'Jeera-Rice',
+          imageUrl: 'https://i.ibb.co/bWD5G27/Jeera-Rice.png',
+          price: 1150.00,
+  description:'Sautéing cumin seeds (jeera) in ghee or oil and then cooking basmati rice with these fragrant seeds, resulting in flavorful and aromatic rice.'
         },
         {
           id: 6,
-          name: 'Chicken Pie',
-          imageUrl: 'https://i.ibb.co/gr8XFWn/Chicken-Pie.png',
-          price: 100.00,
-          description: 'A savory delight with tender chunks of chicken and flavorful seasonings, encased in a buttery, flaky pastry crust. The ultimate comfort food that satisfies your taste buds with every bite.'
+          name: 'Jhinga-Pasinda-Seafood-Curry',
+          imageUrl: 'https://i.ibb.co/5cLQ9N2/Jhinga-Pasinda-Seafood-Curry.png',
+          price: 3380.00,
+          description: 'Flavorful dish featuring prawns or shrimp cooked in a rich and aromatic curry sauce, offering a delightful seafood experience.'
+        },
+        {
+          id: 7,
+          name: 'Macchi-Amritsari',
+          imageUrl: 'https://i.ibb.co/Pc5yk8R/Macchi-Amritsari.png',
+          price: 1810.00,
+          description:'Fish fillets are marinated in a mixture of spices and gram flour, deep-fried until crispy, offering a mouthwatering seafood delicacy.'
+        },
+      
+      {
+        id: 8,
+        name: 'Macchi-Methi-Bahar-Seafood-Curry',
+        imageUrl: 'https://i.ibb.co/0XSvPJS/Macchi-Methi-Bahar-Seafood-Curry.png',
+        price: 2330.00,
+        description: 'Flavorful seafood curry made with fish and fenugreek, creating a delightful and aromatic dish.'
+      },
+      {
+          id: 9,
+          name: 'Masaledar-Jhinga-Seafood-Curry',
+          imageUrl: 'https://i.ibb.co/gFzQph5/Masaledar-Jhinga-Seafood-Curry.png',
+          price: 3380.00,
+  description:'Succulent prawns, cooked with a blend of aromatic spices, creating a delicious and zesty dish.'
+        },
+        {
+          id: 10,
+          name: 'Murgh-65',
+          imageUrl: 'https://i.ibb.co/njGfYwp/Murgh-65.png',
+          price: 1550.00,
+  description:'Marinated and deep-fried chicken, seasoned with spices, curry leaves, and yogurt, creating a spicy and flavorful dish.'
+        },
+        {
+          id: 11,
+          name: 'Punjabi-Samosa',
+          imageUrl: 'https://i.ibb.co/5s3dDS0/Punjabi-Samosa.png',
+          price: 1020.00,
+  description:'Triangular pastry filled with spiced potatoes and peas, deep-fried to golden perfection, offering a savory and delicious treat.'
+        },
+        {
+          id: 12,
+          name: 'Sabzi-Biryani-Vegetable',
+          imageUrl: 'https://i.ibb.co/ZM0DQsW/Sabzi-Biryani-Vegetable.png',
+          price: 1810.00,
+          description: 'Fragrant basmati rice, mixed vegetables, and a blend of aromatic spices, resulting in a delicious and aromatic vegetarian biryani.'
+        },
+        {
+          id: 13,
+          name: 'Tawa-Sabzi',
+          imageUrl: 'https://i.ibb.co/w6XGX4T/Tawa-Sabzi.png',
+          price: 1350.00,
+          description: 'Variety of vegetables with spices on a hot griddle or tawa, resulting in a flavorful and aromatic vegetable medley.'
         },
    
     ],
@@ -334,7 +384,6 @@ const Menu = () => {
           {({ selected }) => (
             <button
               className={`tab-item ${selected ? 'active' : ''}`}
-              onClick={() => {}}
             >
               {category.title}
             </button>
@@ -356,19 +405,7 @@ const Menu = () => {
   </Tab.Group>
   
   </div>
-  //   <div className="menu-container">
-  //   <h1>Restaurant Menu</h1>
-  //   {SHOP_DATA.map((products) => (
-  //     <div key={products.title}>
-  //       <h2>{products.title}</h2>
-  //       <div className="menu-items">
-  //         {products.items.map((item) => (
-  //           <ProducCard key={item.id} item={item} />
-  //         ))}
-  //       </div>
-  //     </div>
-  //   ))}
-  // </div>
+ 
   )
 }
 

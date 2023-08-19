@@ -26,29 +26,26 @@
         padding: 1rem 2rem;
         cursor: pointer;
         transition: background-color 0.2s ease;
-        background-color: #f8f8f8;
+        background-color:  #05c06615;
         border-radius:15px;
-        color: #020202;
-        border: 0cm;
+        color: #000502;
         
-        // outline-offset: 2px;
-
-        // .active{
-        //     background-color:#05C066;
-        //     border: 0cm;
-            
-        // }
+        border: 1px ;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   
         &:hover {
           background-color: #05C066;
+          color: aliceblue;
           border: 0cm;
+          transition: background-color 0.5s ease;
+         
+            transition:0.3s;
+
+            transform:scale(1.1);
+            cursor:pointer
+
         }
   
-        &[data-selected] {
-          background-color: #ea0707;
-          border: 0cm;
-         
-        }
       }
     }
   
@@ -60,6 +57,8 @@
         padding: 5rem 5%;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         padding-bottom: 0px;
+
+
   
       
     }

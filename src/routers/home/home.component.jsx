@@ -6,6 +6,7 @@ import def from '../../assets/def.png'
 import lmn from '../../assets/lmn.png'
 import Feedback from './sections/feedback';
 import Features from './sections/features';
+import { RoughNotation,RoughNotationProps } from 'react-rough-notation';
 
 
 
@@ -14,10 +15,22 @@ const Homepage = () => {
     <div>
    <div className='hero'>
    <div className='caption'>
+    
+   <h1  > 
    
-   <h1>Delicious Food<br></br>
-   Made with<br></br>
-   love
+ 
+   <RoughNotation type="underline" show={true} color="#05C066" strokeWidth='4' animationDuration='2000'>
+   Delicious <span className='tapered' > &nbsp;Food </span><br></br> </RoughNotation>
+     
+ 
+      
+      Made with <br></br>
+        
+    
+   
+     Love.
+       
+   
    </h1><br></br>
    <p className="p-header">Welcome to Milano restaurant ! At our restaurant, we are passionate aboutbr<br></br> serving you exceptional  cuisine that is prepared with utmost care and affection.<br></br>Our talented chefs combine fresh, high-quality ingredients with their culinary <br></br>expertise to create dishes that are not only delicious but also a testament<br></br> to their love for cooking.  Indulge in our mouthwatering<br></br> creations and experience the joy of dining on food made with love.
         </p><br></br>
