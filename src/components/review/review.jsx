@@ -1,25 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import ReviewCard from './reviewCard'; // Import your ReviewCard component
+import ReviewCard from './reviewCard';
+import axios from 'axios'; // Import your ReviewCard component
 
 const Review=()=> {
     const [reviews, setReviews] = useState([]);
+    const [feedbackData, setFeedbackData] = useState([]);
 
     useEffect(() => {
-        // Fetch data from PHP endpoint
-        fetch('https://github.com/Ruvinsara23/marina-restaurant/blob/main/src/components/review/review.php')
-            .then(response => response.json())
-            .then(data => setReviews(data))
-            .catch(error => console.error('Error fetching data:', error));
+      fetch('http://localhost/web/review/yt1.php')
+        .then(response => response.json())
+        .then(data => setFeedbackData(data))
+        .catch(error => console.error('Error fetching feedback data:', error));
     }, []);
-
+  
     return (
-        <div>
-        <h1>Hello</h1>
-            {reviews.map((review, index) => (
-                <ReviewCard key={index} review={review} />
-            ))}
-        </div>
+      <div>
+      <h1>Heloo review</h1>
+        {feedbackData.map(feedback => (
+          <div key={feedback.id}>
+            {/* Display feedback details */}
+            <p>Name: {feedback.name}</p>
+            <p>Rate: {feedback.rate}</p>
+            <p>Review: {feedback.review}</p>
+          </div>
+        ))}
+      </div>
     );
+  
 }
 
 export default Review;

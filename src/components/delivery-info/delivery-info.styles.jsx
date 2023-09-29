@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import './delivery-info.scss'
+import PhoneInput from "react-contact-number-input/dist/PhoneInput";
 
 const DeliveryInformation = () => {
   const [orderType, setOrderType] = useState("delivery");
   const [address, setAddress] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   const handleOrderTypeChange = (event) => {
     setOrderType(event.target.value);
@@ -21,6 +23,9 @@ const DeliveryInformation = () => {
 
   const handleTimeChange = (event) => {
     setSelectedTime(event.target.value);
+  };
+  const handleChangePhoneNumber = (event) => {
+    setPhoneNumber(event.target?.value || "");
   };
 
   return (
@@ -65,12 +70,10 @@ const DeliveryInformation = () => {
           <label>Email</label>
           <input type='email'  name='email' required onChange={()=>{}}  />
           <label>Phone Number</label>
-         <input 
-        type='number'  
-        name='phoneNumber' 
-        required onChange={handleOrderTypeChange} 
-        value='phoneNumber'
-        placeholder="enter Phone numer"
+          <PhoneInput
+            placeholder="Enter your phone number"
+            value={phoneNumber}
+            onChange={handleChangePhoneNumber}
           />
         </div>
       )}

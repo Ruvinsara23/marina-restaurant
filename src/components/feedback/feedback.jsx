@@ -15,32 +15,57 @@ const ReviewForm = () => {
     const [formFields, setFormFields] = useState(defaultFormFields);
   const {value,name,review,}=formFields
 
-  const userDataCollection=collection(db,"review")
 
-  const handleSubmit = async(event) => {
-
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    try {
-        await addDoc(userDataCollection, {
-          name,
-          value,
-          review,
-          createdAt: new Date().toISOString(), // You 
-        });
-  
-    
-      
-  
-        console.log('Review submitted successfully!');
-      } catch (error) {
-   
-        console.error('Error submitting review:', error);
-      }
-      
-      setFormFields(defaultFormFields);
-  };
+    // try {
+    //     const formData = new FormData();
+    //     formData.append('name', name);
+    //     formData.append('value', value);
+    //     formData.append('review', review);
 
+    //     const response = await fetch('http://localhost/web/review/db.php', {
+          
+    //         method: 'POST',
+    //         body: formData,
+    //     });
+
+    //     if (response.ok) {
+    //         console.log('Review submitted successfully!');
+    //     } else {
+    //         console.error('Error submitting review');
+    //     }
+    // } catch (error) {
+    //     console.error('Error submitting review:', error);
+    // }
+    try {
+      const data = {
+          value,
+          name,
+          review,
+      };
+
+      const response = await fetch('http://localhost/web/review/test.php', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+          const responseData = await response.json();
+          console.log('Response from server:', responseData);
+      } else {
+          console.error('Error submitting review');
+      }
+  } catch (error) {
+      console.error('Error submitting review:', error);
+  }
+
+    setFormFields(defaultFormFields);
+};
   
 
   const handleChange = (event) => {
@@ -53,7 +78,7 @@ const ReviewForm = () => {
     return (
         <div className="review">
         <h1>Submit your review</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} >
         <Rating className="review" value={value} onChange={handleChange} cancel={false} color='yellow' name='value' />
         <div class="namee">
                 <p class="feedback-p">Enter Your Name</p>

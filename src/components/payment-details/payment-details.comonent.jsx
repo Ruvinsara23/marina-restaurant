@@ -11,6 +11,7 @@ import { firestore } from '../../utils/firebase.utils';
 import { getDocs,collection,updateDoc,doc,addDoc } from 'firebase/firestore';
 import { db } from '../../utils/firebase.utils';
 import { UserContext } from '../../contexts/user.context';
+import { runTransaction,getDoc } from 'firebase/firestore';
 
 
 
@@ -25,21 +26,23 @@ const PaymentDetails = ({ emailAddress, cardNumber, cardHolderName, subtotal, de
 
     const handlePayment = async(userAuth) => {
 
-      const orderHistoryCollectionRef = collection(userDataCollection, currentUser.uid, 'orderHistory');
-const orderDetails = {
-  orderId: 1,
-  amount: cartTotal,
-  items: cartItems,
-  timestamp: Date.now(), 
-};
+const orderHistoryCollectionRef = collection(userDataCollection, currentUser.uid, 'orderHistory');
+// const orderDetails = {
+//   orderId:1,
+//   amount: cartTotal,
+//   items: cartItems,
+//   timestamp: Date.now(), 
+// };
 
-try {
 
-  await addDoc(orderHistoryCollectionRef, orderDetails);
-  console.log('New document added successfully!');
-} catch (error) {
-  console.error('Error adding new document:', error);
-}
+
+// try {
+
+//   await addDoc(orderHistoryCollectionRef, orderDetails);
+//   console.log('New document added successfully!');
+// } catch (error) {
+//   console.error('Error adding new document:', error);
+// }
 
       // try {
       //   // Update the data in Firestore
@@ -68,6 +71,37 @@ try {
   
       // await firestore.collection('orders').doc(orderId).collection('items').add({ items });
   
+      try {
+        // Query the orderHistory subcollection to get the latest orderId
+        const querySnapshot = await getDocs(orderHistoryCollectionRef);
+        let maxOrderId = 0;
+    
+        // Loop through the documents to find the highest orderId
+        querySnapshot.forEach((doc) => {
+          const data = doc.data();
+          if (data.orderId > maxOrderId) {
+            maxOrderId = data.orderId;
+          }
+        });
+    
+        // Increment the orderId
+        const newOrderId = maxOrderId + 1;
+    
+        // Create the order details
+        const orderDetails = {
+          orderId: newOrderId,
+          amount: cartTotal,
+          items: cartItems,
+          timestamp: Date.now(),
+        };
+    
+        // Add the new order to the orderHistory subcollection
+        await addDoc(orderHistoryCollectionRef, orderDetails);
+        console.log('New document added successfully!');
+      } catch (error) {
+        console.error('Error adding new document:', error);
+      }
+
      
     }
 
@@ -80,7 +114,7 @@ try {
     <span>complete your purchese item by providing your payment details order</span>
     <form onSubmit={()=>{}}>
     <label>Card holder</label>
-    <input type='text' required onChange={()=>{}} name='displayName' value='displayName'  />
+    <input type='text' required onChange={()=>{}} name='displayName' value=''  />
 
     <label>Email</label>
     <input type='email'  name='email' required onChange={()=>{}}  />
@@ -111,6 +145,7 @@ try {
 };
 
 export default PaymentDetails;
+
 
 
 
