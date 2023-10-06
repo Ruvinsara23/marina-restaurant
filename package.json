@@ -22,6 +22,7 @@
     "firebase": "^10.1.0",
     "framer-motion": "^10.16.4",
     "heroicons": "^2.0.18",
+    "lottie-react": "^2.4.0",
     "material-ui-phone-number": "^3.0.0",
     "primereact": "^9.6.1",
     "react": "^18.2.0",

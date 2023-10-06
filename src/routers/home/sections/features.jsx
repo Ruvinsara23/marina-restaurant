@@ -21,7 +21,7 @@ const features = [
       id: "features-3",
       content:
         "Enjoy your favorite dishes delivered to your doorstep promptly with our swift and reliable service",
-      title: "Fast Delivery:",
+      title: "Fast Delivery",
       img: 'https://i.ibb.co/58FNg2j/Group-2915.png',
     },
     {

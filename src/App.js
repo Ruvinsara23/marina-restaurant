@@ -8,6 +8,7 @@ import Menu from './routers/menu/menu.component';
 import CheckOut from './routers/checkout/checkout.component';
 import Profile from './routers/profile/profile.component';
 import AboutUs from './routers/aboutus/about-us';
+import Footer from './components/footer/footer';
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='/user-profile' element={<Profile />} />
         <Route path='/about-us' element={<AboutUs />} />
        </Route>
+       
     </Routes>
   );
 }

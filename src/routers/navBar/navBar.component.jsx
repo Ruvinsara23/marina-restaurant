@@ -7,6 +7,7 @@ import { signOutUser } from '../../utils/firebase.utils';
 import CartIcon from '../../components/cart-Icon/cart-icon';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown';
 import { CartContext } from '../../contexts/cart.context';
+import Logo from '../../assets/logo-no-background.png'
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -37,14 +38,15 @@ const Navbar = () => {
       <Fragment>
       <nav className="navbar">
         <div className="logo">
-          <Link to="/">Logo</Link>
+          <Link to="/"><img src={Logo} alt='Logo' className='logo'   /></Link>
         </div>
         <div className="nvs">
         <div className='Link-container'>
           <div className={`menu-items ${showMenu ? 'show' : ''}`}>
             <Link to="/">Home</Link>
+            <Link to="/menu">Menu</Link>
             <Link to="/about-us">About Us</Link>
-            <Link to="/menu">Menu</Link></div>
+            </div>
             <div className='cart-user-container'>
             <Link >
             <CartIcon  />

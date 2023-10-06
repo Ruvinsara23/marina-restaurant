@@ -19,26 +19,6 @@ const ReviewForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // try {
-    //     const formData = new FormData();
-    //     formData.append('name', name);
-    //     formData.append('value', value);
-    //     formData.append('review', review);
-
-    //     const response = await fetch('http://localhost/web/review/db.php', {
-          
-    //         method: 'POST',
-    //         body: formData,
-    //     });
-
-    //     if (response.ok) {
-    //         console.log('Review submitted successfully!');
-    //     } else {
-    //         console.error('Error submitting review');
-    //     }
-    // } catch (error) {
-    //     console.error('Error submitting review:', error);
-    // }
     try {
       const data = {
           value,
@@ -76,9 +56,10 @@ const ReviewForm = () => {
     
   
     return (
-        <div className="review">
-        <h1>Submit your review</h1>
-        <form onSubmit={handleSubmit} >
+        <div className='review-continer'>
+        <h1>Enter your <br></br>  feedback</h1>
+        <div className="review-card">
+        <form onSubmit={handleSubmit} className='form-about-container' >
         <Rating className="review" value={value} onChange={handleChange} cancel={false} color='yellow' name='value' />
         <div class="namee">
                 <p class="feedback-p">Enter Your Name</p>
@@ -91,12 +72,12 @@ const ReviewForm = () => {
                 <p class="feedback-p">Your Feedback</p>
                 <textarea class="textar" placeholder="Describe your experience.."value={review} 
                 required onChange={handleChange} 
-                name='review'></textarea>
+                name='review'></textarea><br></br>
                 <button  class="btn" type="submit">SUBMIT</button>
             </div>
         </form>
-
-        <Review />
+    </div>
+    
     </div>
     )}
 

@@ -1,60 +1,75 @@
-.review{
-    display: flex;
-    gap:10px ;
+
+
+
+.abd{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 30px;
+  h1{
+    font-size: 40px;
+  }
+}
+
+
+
+
+
+.review-continer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  gap: 30px;
+
+ 
+  .review-card{
+   
+   
+    
+    .review{
+      display: flex;
+      gap:20px ;
+    }
+
+    
+   
    
 }
-
-// styles.scss
-
-// Import any external libraries or reset styles if needed
-
-
-// General styles
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
 }
 
-.form-container {
+
+
+
+.form-about-container {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+
+  textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
 }
 
-// h1 {
-//   text-align: center;
-// }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
 
-label {
-  margin-bottom: 5px;
-}
 
-input,
-select,
-textarea {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-textarea {
-  resize: vertical;
-}
 
 button {
   padding: 10px;
-  background-color:  #b9f4b1;
+  background-color:  #171a17;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -65,7 +80,4 @@ button:hover {
   background-color: #05C066;
 }
 
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
+

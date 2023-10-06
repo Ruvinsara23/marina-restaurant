@@ -5,6 +5,9 @@ import { CartContext } from '../../contexts/cart.context'
 import CartItem from '../cart-item/cart-item'
 import './cart-dropdown.scss'
 import { Navigate, useNavigate } from 'react-router-dom'
+import Lottie from 'lottie-react';
+import animation from '../../assets/8- Online Shopping (2).json'
+
 
 
 const CartDropdown = () => {
@@ -23,7 +26,12 @@ const CartDropdown = () => {
             <CartItem   key={cartItem.id} cartItem={cartItem}   />
           ))
         ) : (
-          <span className='empty-message'>Your cart is empty</span>
+          <div className='empty-message'><Lottie
+          animationData={animation} 
+          loop={true} 
+          autoplay={true} 
+        />
+  </div>
         )}
     </div>
       <button onClick={goToCheckouthandler}>GO TO CHECKOUT</button>

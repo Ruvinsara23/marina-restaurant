@@ -9,8 +9,18 @@ $font-color: black;
   padding: 10px 20px;
   font-size: 16px;
 
+  .logo{
+    height:60px;
+ width: 60px;
+ margin-top: 10px;
+ margin-left: 30px;
+ margin-bottom: 20px;
+  }
 
-
+// img{
+//   
+//   margin-top: 7px;
+// }
   
   .nvs{
     display: flex;
@@ -105,11 +115,13 @@ $font-color: black;
         color: aliceblue;
     }
 
-   
+
+  
       
   }
 
   
+   
 
   
   // Add media query for mobile devices to hide the menu items

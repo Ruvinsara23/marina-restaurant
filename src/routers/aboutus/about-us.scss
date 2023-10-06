@@ -1,0 +1,111 @@
+.about-container{
+  display:flex;
+  flex-direction: column;
+
+  // flex-wrap: wrap;
+
+  .our-story-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    
+    
+  
+   
+  }
+  .revew-form{
+    display: flex;
+  }
+  
+  .our-story{
+    margin: 150px;
+    margin-top: 100px;
+
+    p{
+      line-height: 2rem;
+      word-spacing: 0.3rem;
+      
+    }
+
+  }
+
+
+  .mission-img{
+    width: 500px;
+    height: 500px;
+    margin: 50px;
+    margin-right: 150px;
+    border-radius: 20px;
+  }
+
+  .mission-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px;
+
+    .mission{
+      margin-right: 50px;
+    }
+
+    
+      p{
+        line-height: 2rem;
+        word-spacing: 0.3rem;
+        
+      }
+     .mission-img{
+        width: 600px;
+        height: 600px;
+        margin: 50px;
+        margin-right: 150px;
+        border-radius: 20px;
+      }
+
+      
+
+  }
+}
+
+.about-review-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 30px;
+  margin: 30PX;
+
+  .get-feedback{
+  display: flex;
+  flex-wrap: wrap;
+ 
+  gap: 70px;
+  margin: 34px;
+  margin-top: 84px
+  }
+
+ }
+
+@media (max-width: 800px) {
+  .our-story-container {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .our-story{
+      margin: 50px;
+    
+    }
+
+    .mission-img{
+      width: 450px;
+      height: 450px;
+      margin: 0px;
+      margin-left: 100px;
+      border-radius: 20px;
+    }
+  }
+
+ 
+}

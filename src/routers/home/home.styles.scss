@@ -70,6 +70,8 @@ width: 160px;
 .offer{
     max-height: 460px;
     max-width: 1300px;
+    margin-top: 100px ;
+    margin-bottom: 100px;
 }
 
 
@@ -147,6 +149,7 @@ width: 160px;
 
     .offer{
         display: none;
+        margin-top: 30px;
     }
     
 
@@ -154,7 +157,7 @@ width: 160px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 0px;
+        margin-top: 30px;
     }
 
     .offer-md{

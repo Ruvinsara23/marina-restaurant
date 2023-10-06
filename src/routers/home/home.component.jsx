@@ -7,6 +7,8 @@ import lmn from '../../assets/lmn.png'
 import Feedback from './sections/feedback';
 import Features from './sections/features';
 import { RoughNotation,RoughNotationProps } from 'react-rough-notation';
+import { motion } from "framer-motion";
+import Footer from '../../components/footer/footer';
 
 
 
@@ -17,8 +19,6 @@ const Homepage = () => {
    <div className='caption'>
     
    <h1  > 
-   
- 
    <RoughNotation type="underline" show={true} color="#05C066" strokeWidth='4' animationDuration='2000'>
    Delicious <span className='tapered' > &nbsp;Food </span><br></br> </RoughNotation>
      
@@ -32,18 +32,32 @@ const Homepage = () => {
        
    
    </h1><br></br>
-   <p className="p-header">Welcome to Milano restaurant ! At our restaurant, we are passionate aboutbr<br></br> serving you exceptional  cuisine that is prepared with utmost care and affection.<br></br>Our talented chefs combine fresh, high-quality ingredients with their culinary <br></br>expertise to create dishes that are not only delicious but also a testament<br></br> to their love for cooking.  Indulge in our mouthwatering<br></br> creations and experience the joy of dining on food made with love.
-        </p><br></br>
+   <motion.p className="p-header" initial={{ opacity: 0, scale: 0.5 }}
+   animate={{ opacity: 1, scale: 1 }}
+   transition={{
+     duration: 0.6,
+     delay: 0.3,
+     ease: [0, 0.71, 0.2, 1.01]
+   }}>Welcome to Milano restaurant ! At our restaurant, we are passionate aboutbr<br></br> serving you exceptional  cuisine that is prepared with utmost care and affection.<br></br>Our talented chefs combine fresh, high-quality ingredients with their culinary <br></br>expertise to create dishes that are not only delicious but also a testament<br></br> to their love for cooking.  Indulge in our mouthwatering<br></br> creations and experience the joy of dining on food made with love.
+        </motion.p><br></br>
         <button class="primary">Order Now</button>
         
    </div>
-   <img src={abc} alt='header'  class="hero-img" />
+   
+   <motion.img className="box"
+   initial={{ opacity: 0, scale: 0.5 }}
+   animate={{ opacity: 1, scale: 1 }}
+   transition={{
+     duration: 0.6,
+     delay: 0.3,
+     ease: [0, 0.71, 0.2, 1.01]
+   }} src={abc} alt='header'  class="hero-img" />
    </div>
    <div class="best-selling-product-container">
    <h1 >Our Best Selling <span class="colored-word"> Products</span></h1>
       <Bestselling />
     </div>
-    <div className='offer-container'>
+    <div className='best-selling-product-container'>
     <img src={def} alt='header'  className='offer' />
     <img src={lmn} alt='header'  className='offer-md' />
     </div>
@@ -65,7 +79,7 @@ const Homepage = () => {
       <button>Get start</button>
     </div>
     </div>
- 
+    <Footer />
    </div>
   ) 
 }

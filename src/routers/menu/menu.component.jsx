@@ -4,7 +4,7 @@ import { useContext,Fragment } from 'react';
 import { ProductsContext } from '../../contexts/products.context';
 import { Tab } from '@headlessui/react';
 import './menu.scss'
-
+import { motion } from "framer-motion";
 
 
 
@@ -376,7 +376,7 @@ const Menu = () => {
   const { products } = useContext(ProductsContext);
   return (
 
-<div className='menu-container'>
+<div className='menu-container' >
     <Tab.Group>
     <Tab.List className="tab-list">
       {products.map((category) => (
@@ -394,11 +394,17 @@ const Menu = () => {
     <Tab.Panels>
       {products.map((category) => (
         <Tab.Panel key={category.title} className="tab-panel">
-          <div className="menu-items">
+          <motion.div className="menu-items" initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.6,
+            delay: 0.2,
+            ease: [0, 0.71, 0.2, 1.01]
+          }}>
             {category.items.map((item) => (
               <ProducCard key={item.id} item={item}  />
             ))}
-          </div>
+          </motion.div>
         </Tab.Panel>
       ))}
     </Tab.Panels>

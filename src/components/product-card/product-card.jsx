@@ -4,7 +4,7 @@ import { UserContext } from '../../contexts/user.context';
 import { CartContext } from '../../contexts/cart.context';
 
 const ProducCard = ({ item }) => {
-    const { id,name, imageUrl, price, description } = item;
+  const { id, name, imageUrl, price, description } = item;
     const { addItemToCart} = useContext(CartContext);
    
   return (
@@ -13,10 +13,11 @@ const ProducCard = ({ item }) => {
     <h3>{name}</h3>
     <p>{description}</p>
     <div className="price-container">
-      <div className="price">LKR{price.toFixed(2)}</div>
+      <div className="price">LKR{price}.00</div>
       <button className="add-to-cart" onClick={()=>addItemToCart(item)}>
         Add to cart
       </button>
+      
     </div>
   </div>
   )

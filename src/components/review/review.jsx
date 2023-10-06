@@ -15,7 +15,7 @@ const Review=()=> {
   
     return (
       <div>
-      <h1>Heloo review</h1>
+      <h1>review</h1>
         {feedbackData.map(feedback => (
           <div key={feedback.id}>
             {/* Display feedback details */}
