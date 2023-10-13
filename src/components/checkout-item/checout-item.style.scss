@@ -15,6 +15,17 @@
       width: 100px;
       height: 100px;
       object-fit: cover;
+
+    }
+    .deletebtn{
+
+      padding: 10px;
+     
+     
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
     }
   }
 
@@ -48,6 +59,8 @@
       
       }
     }
+
+   
   }
   
   .remove {

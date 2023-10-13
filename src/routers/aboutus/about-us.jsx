@@ -2,15 +2,13 @@ import React from 'react'
 import OurStory from '../../assets/story.jpg'
 import Mission from '../../assets/mission.jpg'
 import ReviewForm from '../../components/feedback/feedback'
-import Review from '../../components/review/review'
 import GetFeedback from '../../components/feedback/get_feedback'
 
 import './about-us.scss'
 import Footer from '../../components/footer/footer'
 import {motion} from "framer-motion"
 
-// <ReviewForm />
-// // <GetFeedback />
+
 const AboutUs = () => {
   return (
     <motion.div className='about-container' initial={{ opacity: 0, scale: 0.5 }}
@@ -33,7 +31,7 @@ Milano is a family-owned and operated restaurant that has been serving up authen
 <img src={OurStory} alt='our story' className='mission-img' />
 </div>
 <div className='mission-container'>
-<img src={Mission} alt='mission ' className='mission-img' />
+<img src={Mission} alt='mission ' className='mission-imga' />
 <div className='mission'>
 <h1>Our Mission</h1><br></br>
 <p>
@@ -47,7 +45,7 @@ Our mission is to provide our customers with a memorable dining experience. We u
 <GetFeedback />
 
 <div className='revew-form'>
-
+<h2>Enter your <br></br>  feedback</h2>
 <ReviewForm />
 </div>
 

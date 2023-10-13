@@ -30,7 +30,7 @@ const CheckoutItem = ({ cartItem }) => {
         <span onClick={addItemHandler}>+</span>
         </span>
       </div>
-        <button onClick={clearItemHandler}><img src={delete1} alt="abc"  /></button>
+        <button  className="deletebtn"onClick={clearItemHandler}><img src={delete1} alt="abcd"  /></button>
     </div>
      
     );

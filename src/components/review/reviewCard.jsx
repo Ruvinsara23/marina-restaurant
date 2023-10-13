@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 import './reviewCard.style.scss'
-import People from '../../assets/people01.png'
 
+import People from '../../assets/user (1).png'
 function ReviewCard({ review }) {
     const renderStars = () => {
         const stars = [];

@@ -1,20 +1,18 @@
-::-webkit-scrollbar {
-    display: none;
-  }
+
   
 
 .order-history-component{
     display: flex;
     flex-wrap: wrap;
-    display:-webkit-flex;
     border-radius: 10px;
-   max-width: 1000px;
-    height: 700px ;
+    max-width: 800px;
+    max-height: 700px ;
+    flex-direction: column;
+    overflow-x: scroll;
+    border-radius: 10px;
+    padding: 15px;
+
 
   }
 
-  @media only screen and (max-width: 768px) {
-  
-    
 
-  }

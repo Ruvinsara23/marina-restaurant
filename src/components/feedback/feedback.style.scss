@@ -33,7 +33,18 @@
       gap:20px ;
     }
 
-    
+    .btn{
+      color: #f3f3f3;
+      border-radius: 10px;
+      background: #000000;
+      padding:15px ;
+      font-size: 16px ;
+      cursor: pointer;
+      width: 160px;  
+      margin-left: 20px;
+      margin-bottom: 30px;
+      border-radius: 20px;
+    }
    
    
 }
@@ -67,17 +78,7 @@
 
 
 
-button {
-  padding: 10px;
-  background-color:  #171a17;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-button:hover {
-  background-color: #05C066;
-}
+
 
 

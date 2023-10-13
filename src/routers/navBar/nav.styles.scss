@@ -1,8 +1,7 @@
-$primary-bg-color: FCFEFD;
-$font-color: black;
+
 
 .navbar {
-  background-color: $primary-bg-color;
+  background-color: #FCFEFD;
   display: flex;
   justify-content:space-between;
   align-items: center;
@@ -13,15 +12,18 @@ $font-color: black;
     height:60px;
  width: 60px;
  margin-top: 10px;
- margin-left: 30px;
+ margin-left:30px;
  margin-bottom: 20px;
+
+ @media only screen and (max-width: 768px) {
+
+  margin-left:0px;
+      
+  
+}
+
   }
 
-// img{
-//   
-//   margin-top: 7px;
-// }
-  
   .nvs{
     display: flex;
     align-items: center;
@@ -88,7 +90,7 @@ $font-color: black;
 .logo {
   a {
     text-decoration: none;
-    color: $font-color;
+    color: black;
     font-weight: bold;
     font-size: 20px;
   }
@@ -101,7 +103,7 @@ $font-color: black;
 
   a {
     text-decoration: none;
-    color: $font-color;
+    color:black;
     margin-left: 20px;
 
     &:first-child {
@@ -124,8 +126,11 @@ $font-color: black;
    
 
   
-  // Add media query for mobile devices to hide the menu items
+  
   @media only screen and (max-width: 768px) {
+
+    
+      
     display: none;
   }
 }
@@ -143,7 +148,20 @@ $font-color: black;
 
 
 
+
+
 @media only screen and (max-width: 768px) {
+
+  .logo{
+       height: 60px;
+    width: 60px;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+
+    margin-left: 0px;
+  
+  }
   .order-button{
     display: none;
   }
@@ -158,7 +176,7 @@ $font-color: black;
       position: absolute;
       top: 60px;
       right: 20px;
-      background-color: $primary-bg-color;
+      background-color:#FCFEFD ;
       padding: 10px;
       border-radius: 5px;
 
@@ -174,12 +192,16 @@ $font-color: black;
   }
 }
 
-
+.logo{
+  margin-left: 0px;
+  
+  }
 
 .menu-items{
     display: block;
     
 }
+
 
 
 

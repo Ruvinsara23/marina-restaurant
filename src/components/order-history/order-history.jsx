@@ -46,6 +46,7 @@ const OrderHistoryComponent = () => {
     {orderHistory.map((order,index) => (
         <OrderHistoryCard key={index} order={order}/>))}
     </div>
+    
     </div>
   )
 }

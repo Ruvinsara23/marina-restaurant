@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import ReviewCard from './reviewCard';
-import axios from 'axios'; // Import your ReviewCard component
+// import ReviewCard from './reviewCard';
+// import axios from 'axios'; 
 
 const Review=()=> {
-    const [reviews, setReviews] = useState([]);
+    // const [reviews, setReviews] = useState([]);
     const [feedbackData, setFeedbackData] = useState([]);
 
     useEffect(() => {
@@ -18,7 +18,6 @@ const Review=()=> {
       <h1>review</h1>
         {feedbackData.map(feedback => (
           <div key={feedback.id}>
-            {/* Display feedback details */}
             <p>Name: {feedback.name}</p>
             <p>Rate: {feedback.rate}</p>
             <p>Review: {feedback.review}</p>

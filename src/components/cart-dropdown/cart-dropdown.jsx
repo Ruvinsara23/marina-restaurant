@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { CartContext } from '../../contexts/cart.context'
 import CartItem from '../cart-item/cart-item'
 import './cart-dropdown.scss'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Lottie from 'lottie-react';
 import animation from '../../assets/8- Online Shopping (2).json'
 

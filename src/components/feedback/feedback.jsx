@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './feedback.style.scss'
-import { collection,getDocs,addDoc } from 'firebase/firestore'
+// import { collection,getDocs,addDoc } from 'firebase/firestore'
 import { Rating } from 'primereact/rating';
-import { db } from '../../utils/firebase.utils';
-import Review from '../review/review';
+// import { db } from '../../utils/firebase.utils';
+// import Review from '../review/review';
 
 const defaultFormFields={
     value:5,
@@ -57,7 +57,7 @@ const ReviewForm = () => {
   
     return (
         <div className='review-continer'>
-        <h1>Enter your <br></br>  feedback</h1>
+        
         <div className="review-card">
         <form onSubmit={handleSubmit} className='form-about-container' >
         <Rating className="review" value={value} onChange={handleChange} cancel={false} color='yellow' name='value' />

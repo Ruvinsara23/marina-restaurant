@@ -1,12 +1,12 @@
 import './home.styles.scss';
 import React from 'react';
-import abc from '../../assets/abc.png'
+import hero from '../../assets/Group 2919w.png'
 import Bestselling from './sections/bestselling';
 import def from '../../assets/def.png'
 import lmn from '../../assets/lmn.png'
 import Feedback from './sections/feedback';
 import Features from './sections/features';
-import { RoughNotation,RoughNotationProps } from 'react-rough-notation';
+import { RoughNotation} from 'react-rough-notation';
 import { motion } from "framer-motion";
 import Footer from '../../components/footer/footer';
 
@@ -51,7 +51,7 @@ const Homepage = () => {
      duration: 0.6,
      delay: 0.3,
      ease: [0, 0.71, 0.2, 1.01]
-   }} src={abc} alt='header'  class="hero-img" />
+   }} src={hero} alt='header'  class="hero-img" />
    </div>
    <div class="best-selling-product-container">
    <h1 >Our Best Selling <span class="colored-word"> Products</span></h1>

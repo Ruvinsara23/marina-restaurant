@@ -1,8 +1,13 @@
+$sub-color: grey;
+$main-color: black;
 
+@mixin shrinkLabel {
+  top: -14px;
+  font-size: 12px;
+  color: $main-color;
+}
 
-
-
-.sign-in-container{
+.sign-up-container{
  
   position: relative;
   margin: 45px;
@@ -15,7 +20,6 @@
   max-width: 500px;
   width: 100%;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  justify-content: center;
 
   form{
     margin-top: 20px;
@@ -28,18 +32,18 @@
 
     
     .sign-up{
-        color: #f3f3f3;
-        border-radius: 10px;
-        background: #000000;
-        padding:15px ;
-        font-size: 16px ;
-        // border-color: #000000;
-        width: 160px;  
-        margin-left: 20px;
-        margin-bottom: 30px;
-        border-radius: 20px;
+      color: #f3f3f3;
+      border-radius: 10px;
+      background: #000000;
+      padding:15px ;
+      font-size: 16px ;
+      cursor: pointer;
+      width: 160px;  
+      margin-left: 20px;
+      margin-bottom: 30px;
+      border-radius: 20px;
 
-    }
+  }
 
     .google-signin-button {
         display: flex;
@@ -77,21 +81,23 @@
   input {
     background: none;
     background-color: white;
-    color: grey;
+    color: $sub-color;
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
     width: 100%;
     border: none;
     border-radius: 0;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid $sub-color;
     margin: 5px 0;
 
     &:focus {
       outline: none;
     }
 
-    
+    &:focus ~ .form-input-label {
+      @include shrinkLabel();
+    }
   }
 
   input[type='password'] {
@@ -99,7 +105,7 @@
   }
 
   .form-input-label {
-    color: grey;
+    color: $sub-color;
     font-size: 16px;
     font-weight: normal;
     position: absolute;
@@ -109,5 +115,41 @@
     transition: 300ms ease all;
 
     
+
+    &.shrink {
+      @include shrinkLabel();
+    }
   }
+  .tot-container{
+    display: flex;
+    margin:10px;
+    flex-direction: column;
+    
+    .labletot{
+       display: flex;
+       justify-content: space-between;
+       margin: 10px;
+       gap: 20px;
+    }
+
+    
+    
+  }
+
+  .pay-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+  
 }

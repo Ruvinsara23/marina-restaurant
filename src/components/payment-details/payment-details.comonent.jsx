@@ -11,7 +11,7 @@ import { firestore } from '../../utils/firebase.utils';
 import { getDocs,collection,updateDoc,doc,addDoc } from 'firebase/firestore';
 import { db } from '../../utils/firebase.utils';
 import { UserContext } from '../../contexts/user.context';
-import { runTransaction,getDoc } from 'firebase/firestore';
+
 
 
 
@@ -27,56 +27,13 @@ const PaymentDetails = ({ emailAddress, cardNumber, cardHolderName, subtotal, de
     const handlePayment = async(userAuth) => {
 
 const orderHistoryCollectionRef = collection(userDataCollection, currentUser.uid, 'orderHistory');
-// const orderDetails = {
-//   orderId:1,
-//   amount: cartTotal,
-//   items: cartItems,
-//   timestamp: Date.now(), 
-// };
 
-
-
-// try {
-
-//   await addDoc(orderHistoryCollectionRef, orderDetails);
-//   console.log('New document added successfully!');
-// } catch (error) {
-//   console.error('Error adding new document:', error);
-// }
-
-      // try {
-      //   // Update the data in Firestore
-      //   const userDocRef = doc(userDataCollection, currentUser.uid, 'orderHistory/documentId');
-      //   console.log("user doc ref b",userDocRef);
-      //   await addDoc(userDocRef, {
-      //     orderId: '18', // Replace with the 
-      //       amount: cartTotal, // Replace with the actual payment amount
-      //       items: [{cartItems}],
-      //       timestamp: Date.now(),
-      //     // Use the current timestamp as a unique identifier
-      //   });
-  
-      //   console.log("Data updated successfully!");
-      // } catch (error) {
-      //   console.error("Error updating data:", error);
-      // }
-      // Add the orderDetails object to the 'orders' collection in Firestore
-    //  await firestore.collection('users','orderHistory' ).add({orderDetails});
-  
-      // Get the auto-generated ID of the newly added order document
-      // const orderId = docRef.id;
-  
-      // // Now, add a new 'items' sub-collection within the order document
-      // const items = [{cartItems}]
-  
-      // await firestore.collection('orders').doc(orderId).collection('items').add({ items });
-  
       try {
-        // Query the orderHistory subcollection to get the latest orderId
+
         const querySnapshot = await getDocs(orderHistoryCollectionRef);
         let maxOrderId = 0;
     
-        // Loop through the documents to find the highest orderId
+      
         querySnapshot.forEach((doc) => {
           const data = doc.data();
           if (data.orderId > maxOrderId) {
@@ -84,10 +41,10 @@ const orderHistoryCollectionRef = collection(userDataCollection, currentUser.uid
           }
         });
     
-        // Increment the orderId
+    
         const newOrderId = maxOrderId + 1;
     
-        // Create the order details
+
         const orderDetails = {
           orderId: newOrderId,
           amount: cartTotal,
@@ -95,13 +52,14 @@ const orderHistoryCollectionRef = collection(userDataCollection, currentUser.uid
           timestamp: Date.now(),
         };
     
-        // Add the new order to the orderHistory subcollection
+    
         await addDoc(orderHistoryCollectionRef, orderDetails);
         console.log('New document added successfully!');
       } catch (error) {
         console.error('Error adding new document:', error);
       }
 
+      setShowPopup(!showPopup);
      
     }
 
@@ -114,7 +72,7 @@ const orderHistoryCollectionRef = collection(userDataCollection, currentUser.uid
     <span>complete your purchese item by providing your payment details order</span>
     <form onSubmit={()=>{}}>
     <label>Card holder</label>
-    <input type='text' required onChange={()=>{}} name='displayName' value=''  />
+    <input type='text' required onChange={()=>{}} name='displayName'   />
 
     <label>Email</label>
     <input type='email'  name='email' required onChange={()=>{}}  />
@@ -138,14 +96,17 @@ const orderHistoryCollectionRef = collection(userDataCollection, currentUser.uid
     </div>
     </div>
     <button className='pay-button'  onClick={handlePayment}
-    >Pay now</button>
-   {showPopup && <PaymentSuccessPopup />}
+    >Pay now
+    {showPopup && <PaymentSuccessPopup />}
+    </button>
+    
+  
     </div>
   );
 };
 
 export default PaymentDetails;
-
+ 
 
 
 

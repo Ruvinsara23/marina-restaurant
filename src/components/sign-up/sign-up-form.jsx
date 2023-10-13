@@ -3,10 +3,10 @@ import { useState ,useContext} from 'react';
 import {
     createAuthUserWithEmailAndPassword,
     createUserDocumentFromAuth,
-  }from '../utils/firebase.utils';
+  }from '../../utils/firebase.utils';
 import './sign-up-form.style.scss'
-import google from '../assets/google.png'
-import { UserContext } from '../contexts/user.context';
+
+import { UserContext } from '../../contexts/user.context';
 
 
 const defaultFormFields={

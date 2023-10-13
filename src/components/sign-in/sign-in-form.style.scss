@@ -1,13 +1,8 @@
-$sub-color: grey;
-$main-color: black;
 
-@mixin shrinkLabel {
-  top: -14px;
-  font-size: 12px;
-  color: $main-color;
-}
 
-.sign-up-container{
+
+
+.sign-in-container{
  
   position: relative;
   margin: 45px;
@@ -20,6 +15,7 @@ $main-color: black;
   max-width: 500px;
   width: 100%;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  justify-content: center;
 
   form{
     margin-top: 20px;
@@ -37,6 +33,7 @@ $main-color: black;
         background: #000000;
         padding:15px ;
         font-size: 16px ;
+        cursor: pointer;
         // border-color: #000000;
         width: 160px;  
         margin-left: 20px;
@@ -81,23 +78,21 @@ $main-color: black;
   input {
     background: none;
     background-color: white;
-    color: $sub-color;
+    color: grey;
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
     width: 100%;
     border: none;
     border-radius: 0;
-    border-bottom: 1px solid $sub-color;
+    border-bottom: 1px solid grey;
     margin: 5px 0;
 
     &:focus {
       outline: none;
     }
 
-    &:focus ~ .form-input-label {
-      @include shrinkLabel();
-    }
+    
   }
 
   input[type='password'] {
@@ -105,7 +100,7 @@ $main-color: black;
   }
 
   .form-input-label {
-    color: $sub-color;
+    color: grey;
     font-size: 16px;
     font-weight: normal;
     position: absolute;
@@ -115,41 +110,5 @@ $main-color: black;
     transition: 300ms ease all;
 
     
-
-    &.shrink {
-      @include shrinkLabel();
-    }
   }
-  .tot-container{
-    display: flex;
-    margin:10px;
-    flex-direction: column;
-    
-    .labletot{
-       display: flex;
-       justify-content: space-between;
-       margin: 10px;
-       gap: 20px;
-    }
-
-    
-    
-  }
-
-  .pay-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: #0056b3;
-    }
-  }
-  
 }

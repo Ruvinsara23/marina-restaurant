@@ -39,7 +39,7 @@ const StripeElement = () => {
         payment_method: {
           card: elements.getElement(CardElement),
           billing_details: {
-            name: 'Andree',
+            name: 'pansilu',
           },
         },
       });

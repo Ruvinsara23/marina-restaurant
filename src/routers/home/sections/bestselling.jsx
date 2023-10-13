@@ -4,47 +4,47 @@ import ProducCard from '../../../components/product-card/product-card';
 
 const SHOP_DATA = [
         {
-            id: 20,
-            name: 'Murgh-65',
-            imageUrl: 'https://i.ibb.co/yPMgg0j/Murgh-65.png',
-            price: 450.00,
-            description:'A scrumptious combination of tender chicken ham, wholesome eggs, and a delectable pastry crust. A balanced and fulfilling option for any time of the day.'
+          id: 2,
+          name: 'Beef-Sri-Lankan-Devilled',
+          imageUrl: 'https://i.ibb.co/xHwpMM6/Beef-Sri-Lankan-Devilled.png',
+          price: 2200.00,
+          description: 'Spicy and tangy dish made with tender beef cooked in a flavorful sauce, typically featuring a combination of chili, garlic, ginger, onions, and various spices, creating a deliciously fiery and aromatic flavor profile.'
           },
         
         {
-          id: 2,
-          name: 'Adraki-Aloo-Gobi',
-          imageUrl: 'https://i.ibb.co/myjmD9g/Adraki-Aloo-Gobi.png',
-          price: 100.00,
-          description: 'A delightful fusion of soft, pillowy bread filled with succulent fish and aromatic spices. Perfect as a quick and tasty snack or light meal option'
+          id: 12,
+          name: 'Sabzi-Biryani-Vegetable',
+          imageUrl: 'https://i.ibb.co/ZM0DQsW/Sabzi-Biryani-Vegetable.png',
+          price: 1810.00,
+          description: 'Fragrant basmati rice, mixed vegetables, and a blend of aromatic spices, resulting in a delicious and aromatic vegetarian biryani.'
         },
         {
+          id: 29,
+          name: 'Chocolate-Mousse',
+          imageUrl: 'https://i.ibb.co/Z1yk9s7/Chocolate-Mousse.png',
+          price: 350.00,
+          description: 'Smooth chocolate cream, topped with whipped cream or chocolate shavings, providing a rich and indulgent treat.'
+          },
+          {
+            id: 32,
+          name: 'Mango-Pudding',
+          imageUrl: 'https://i.ibb.co/GT3g2KN/Mango-Pudding.png',
+          price: 350.00,
+  description:'Ripe mango puree, milk or cream, sugar, and gelatin, resulting in a smooth and fruity treat perfect for mango lovers.'
+          },
+          {
+            id: 15,
+          name: 'Gourmet-Beef-Burger',
+          imageUrl: 'https://i.ibb.co/VMP39g2/Gourmet-Beef-Burger.png',
+          price: 1940.00,
+          description: 'High-quality ground beef, artisanal buns, and a selection of gourmet toppings and condiments, resulting in a decadent and elevated burger experience.'
+          },
+          {
             id: 25,
-            name: 'Jhinga-Pasinda-Seafood-Curry',
-            imageUrl: 'https://i.ibb.co/G0BYKgB/Jhinga-Pasinda-Seafood-Curry.png',
-            price: 100.00,
-    description:'A delightful fusion of soft, pillowy bread filled with succulent fish and aromatic spices. Perfect as a quick and tasty snack or light meal option.'
-          },
-          {
-            id: 22,
-            name: 'Devilled Chicken Puff',
-            imageUrl: 'https://i.ibb.co/HHXy3dw/Devilled-Chicken-Puff.png',
-            price: 150.00,
-    description:'An irresistible blend of fish and Chinese-inspired spices wrapped in a crispy, golden-brown roll. Experience the harmonious flavors of the East in every crispy bite'
-          },
-          {
-            id: 21,
-            name: 'Chicken Ham & Egg Pie',
-            imageUrl: 'https://i.ibb.co/qxM39s8/Chicken-Ham-Egg-Pie.png',
-            price: 150.00,
-    description:'A fiery and flavorful treat featuring spicy devilled chicken ensconced in a delicate puff pastry. For those who crave a zesty twist to their snacking experience.'
-          },
-          {
-            id: 23,
-            name: 'Chicken Pie',
-            imageUrl: 'https://i.ibb.co/gr8XFWn/Chicken-Pie.png',
-            price: 100.00,
-            description: 'A savory delight with tender chunks of chicken and flavorful seasonings, encased in a buttery, flaky pastry crust. The ultimate comfort food that satisfies your taste buds with every bite.'
+            name: 'Mogul-Shashlik-Pizza',
+            imageUrl: 'https://i.ibb.co/6mzmMMw/Mogul-Shashlik-Pizza.png',
+            price: 2090.00,
+            description: 'Paneer, bell pepper, onion, and coriander leaves atop a Mogul Shashlik-inspired pizza offer a delightful blend of flavors and Mogul influences.'
           }
         ]
 
