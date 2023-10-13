@@ -14,6 +14,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+
+# `Set your firebase config``
+Remember to replace the config variable in your firebase.utils.js with your own config object from the firebase dashboard! Navigate to the project settings gear icon > project settings and scroll down to the config code. Copy the object in the code and replace the variable in your cloned code.
+
+![firebase img](image.png)
+
+### `Set up php`
+You need to add php files to htdocs folder in xwamp folder.
+
+### `Set up php`
+You need  move project folder in sql  to  C:\xampp\mysql\data this path 
+
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\

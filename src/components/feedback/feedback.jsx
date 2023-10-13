@@ -26,7 +26,7 @@ const ReviewForm = () => {
           review,
       };
 
-      const response = await fetch('http://localhost/web/review/test.php', {
+      const response = await fetch('http://localhost/web/review/add_reviews.php', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
