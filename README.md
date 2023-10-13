@@ -21,7 +21,7 @@ Remember to replace the config variable in your firebase.utils.js with your own 
 ![firebase img](image.png)
 
 ### `Set up php`
-You need to add php files to htdocs folder in xwamp folder.
+You need to add php files to htdocs folder in xampp folder.
 
 ### `Set up php`
 You need  move project folder in sql  to  C:\xampp\mysql\data this path 
