@@ -1,12 +1,13 @@
 import React from 'react'
 import OurStory from '../../assets/story.jpg'
 import Mission from '../../assets/mission.jpg'
-import ReviewForm from '../../components/feedback/feedback'
-import GetFeedback from '../../components/feedback/get_feedback'
 
 import './about-us.scss'
 import Footer from '../../components/footer/footer'
 import {motion} from "framer-motion"
+
+
+
 
 
 const AboutUs = () => {
@@ -41,15 +42,7 @@ Our mission is to provide our customers with a memorable dining experience. We u
 </div>
 
 </div>
-<div className='about-review-container'>
-<GetFeedback />
 
-<div className='revew-form'>
-<h2>Enter your <br></br>  feedback</h2>
-<ReviewForm />
-</div>
-
-</div>
 
 <Footer />
  

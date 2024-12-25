@@ -17,12 +17,38 @@
     right: 40px;
     z-index: 5;
   
-   
+    .empty-cart-message {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      p {
+        margin-top: 0;
+        font-size: 12px;
+        color: #888; // light gray color
+      }
+      button {
+        margin-top: 5px;
+      }
+    }
   
+    .empty-message-a {
+      color: #201e1e; 
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      font-size: 18px;
+      align-self: center;
+      border: #000;
+      border:2px
+      
+    }
     .empty-message {
       font-size: 18px;
-      margin: 50px auto;
+     
     }
+  
   
     .cart-items{
       height: 540px;

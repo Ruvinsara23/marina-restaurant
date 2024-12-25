@@ -56,13 +56,16 @@ const Navbar = () => {
               <i className="fa fa-user"  ></i> <FiUser />
               {profile && (
                 <div className="profile-dropdown">
-                  <Link to="/user-profile" className="dropdown-item">
-                    Your profile
-                  </Link>
+                  
                   {currentUser ? (
+                    <Fragment>
+                    <Link to="/user-profile" className="dropdown-item">
+                    Profile
+                  </Link>
                     <span className="dropdown-item"  onClick={signOutHandler}>
                       Sign Out
                     </span>
+                    </Fragment>
                   ) : (
                     <Link to="/sign-in" className="dropdown-item">
                       Sign In
@@ -72,12 +75,6 @@ const Navbar = () => {
               )}
             </Link>
           </div>
-          </div>
-          <Link to="/order" className="order-button">
-            Order Now
-          </Link>
-          <div className="menu-icon" onClick={toggleMenu}>
-            <i className="fa-bars">hello</i>
           </div>
         </div>
       </nav>

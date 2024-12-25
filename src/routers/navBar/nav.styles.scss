@@ -52,14 +52,15 @@
    
     .profile-dropdown {
       border-radius: 5px;
-      top: 4rem;
+      top: 4.5rem;
+      padding: 5px;
       align-items: flex-start;
       display: flex;
       flex-direction: column;
       background-color: white;
       position: absolute;
       right: 2rem;
-      width: 12rem;
+      width: 6rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   
       .dropdown-item {
@@ -113,7 +114,7 @@
     .order-button{
   
       padding: 30px 30px;
-      border-radius: 5px;
+      border-radius: 20px;
         color: aliceblue;
     }
 

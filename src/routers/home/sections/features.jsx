@@ -25,7 +25,7 @@ const features = [
       img: 'https://i.ibb.co/58FNg2j/Group-2915.png',
     },
     {
-      id: "features-1",
+      id: "features-5",
       content:
         "Indulge in a gastronomic delight with our carefully crafted menu prepared by our talented chefs",
       title: "Best Food",

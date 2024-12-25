@@ -32,7 +32,7 @@ const feedback = [
     img: 'https://i.ibb.co/7KkvtKx/people03.png',
   },
   {
-    id: "feedback-1",
+    id: "feedback-4",
     content:
       " I celebrated my anniversary at Restaurant Marina last night, and it was the perfect evening. The food was exquisite, the service was impeccable, and the atmosphere was elegant and romantic. I would highly recommend Restaurant Marina for any special occasion",
     name: "Herman Jensen",
@@ -40,7 +40,7 @@ const feedback = [
     img: 'https://i.ibb.co/BrT5gQs/Ellipse-4.png',
   },
   {
-    id: "feedback-1",
+    id: "feedback-5",
     content:
       "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.It is usually people in the money business, finance, and international trade that are really rich.",
     name: "Herman Jensen",
