@@ -13,7 +13,7 @@ const ProducCard = ({ item }) => {
     <p>{description}</p>
     <div className="price-container">
       <div className="price">LKR{price}.00</div>
-      <button  className="add-to-cart" onClick={()=>addItemToCart(item)}>
+      <button  className="add-to-cart " onClick={()=>addItemToCart(item)}>
         Add to cart
       </button>
       

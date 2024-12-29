@@ -20,8 +20,7 @@
         }
         display: flex;
         flex-direction: row;
-        /* align-items: center; */
-        /* justify-content: space-between; */
+
         flex-direction: column;
         
        
@@ -51,7 +50,9 @@ p{
 }
 
 .primary{
-border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+border-radius: 20px;
 background: #000;
 padding:15px ;
 font-size: 14px ;
@@ -106,7 +107,8 @@ width: 160px;
         border-radius: 10px;
         background: #05C066;
         padding:20px ;
-        font-size: 14px ;
+        font-size: 1rem;
+       font-weight: bold;
         border-color: #05C066;
         width: 160px;
         margin-left: 20px;

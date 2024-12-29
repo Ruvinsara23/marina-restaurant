@@ -31,6 +31,22 @@ const DeliveryInformation = () => {
   return (
     <div className="delivery-info">
       <h2>Delivery Information</h2>
+      <div className="date">
+        <label>Select Date:</label>
+        <input
+          type="date"
+          value={selectedDate}
+          onChange={handleDateChange}
+        />
+      </div>
+      <div className="time">
+      <label>Select Time:</label>
+      <input
+        type="time"
+        value={selectedTime}
+        onChange={handleTimeChange}
+      />
+    </div>
       <div className="order-type">
         <input
           type="radio"
@@ -71,6 +87,7 @@ const DeliveryInformation = () => {
           <input type='email'  name='email' required onChange={()=>{}}  />
           <label>Phone Number</label>
           <PhoneInput
+          className="phone-input"
             placeholder="Enter your phone number"
             value={phoneNumber}
             onChange={handleChangePhoneNumber}
@@ -78,23 +95,9 @@ const DeliveryInformation = () => {
         </div>
       )}
 
-      <div className="date">
-        <label>Select Date:</label>
-        <input
-          type="date"
-          value={selectedDate}
-          onChange={handleDateChange}
-        />
-      </div>
+      
 
-      <div className="time">
-        <label>Select Time:</label>
-        <input
-          type="time"
-          value={selectedTime}
-          onChange={handleTimeChange}
-        />
-      </div>
+     
     </div>
   );
 };

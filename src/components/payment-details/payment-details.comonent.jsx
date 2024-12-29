@@ -83,15 +83,15 @@ const orderHistoryCollectionRef = collection(userDataCollection, currentUser.uid
     <div className='tot-container'>
     <div className='labletot'>
     <label>DeliveryCharges</label>
-    <label>150</label>
+    <label>Rs. 150</label>
     </div>
     <div className='labletot'>
     <label>Sub total</label>
-    <label>{cartTotal}</label>   
+    <label>Rs. {cartTotal}</label>   
 </div>
 <div className='labletot'>
-<lable>Total</lable>
-    <label>{cartTotal+150}</label>
+<label>Total</label>
+    <label>Rs. {cartTotal+150}</label>
     
     </div>
     </div>

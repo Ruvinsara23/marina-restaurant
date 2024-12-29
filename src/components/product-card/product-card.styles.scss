@@ -33,14 +33,7 @@
   
 }
 
-.add-to-cart {
-  padding: 10px;
-  background-color:  #171a17;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+
 
 .product-card img {
   display: flex;
@@ -85,8 +78,8 @@
   padding: 8px 15px;
   border-radius: 20px;
   cursor: pointer;
- border-color: #0c0202;
- margin-left: 76px;
+  border: none;
+  margin-left: 66px;
 
   &:hover{
     transition:0.2s;

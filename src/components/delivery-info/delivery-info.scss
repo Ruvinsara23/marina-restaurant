@@ -1,125 +1,137 @@
-
-
 @mixin shrinkLabel {
-    top: -14px;
-    font-size: 12px;
-    color: black;
-  }
+  top: -14px;
+  font-size: 12px;
+  color: black;
+}
 
 .delivery-info {
-    padding: 0px;
-    width: 450px;
-    margin: 0px;
+  padding: 0;
+  width: 85%;
+  max-width: 480px;
+;
   
-    h2 {
-      text-align: left;
-    }
-  
-    .order-type {
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-  
-      input {
-        margin-right: 5px;
-      }
-    }
-  
-    .address {
-      margin-bottom: 10px;
-  
-      label {
-        display: block;
-        margin-bottom: 5px;
-      }
-  
-      span{
-        margin-left:0px ;
-      }
-     
-      input {
-        background: none;
-        background-color: white;
-        color: greyr;
-        font-size: 18px;
-        padding: 10px 10px 10px 5px;
-        display: block;
-        width: 100%;
-        border: none;
-        border-radius: 0;
-        border-bottom: 1px solid grey;
-        margin: 5px 0;
-    
-        &:focus {
-          outline: none;
-        }
-    
-        &:focus ~ .form-input-label {
-          @include shrinkLabel();
-        }
-      }
-    
-      input[type='password'] {
-        letter-spacing: 0.3em;
-      }
-    
-      
-    }
-  
-    .date,
-    .time {
-      margin-top: 20px;
-      margin-bottom: 20px;
-  
-
-      input {
-        width: 100%;
-        padding: 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-    }
-  
-
-    
-    button{
-        color: #FCFEFD;
-        border-radius: 10px;
-        background: #05C066;
-        padding:20px ;
-        font-size: 14px ;
-        border-color: #05C066;
-        width: 160px;
-        margin-left: 20px;
-    
-  
-      &:hover {
-        background-color: #0056b3;
-      }
-    }
-  }
-  
-  @media only screen and (max-width: 768px) {
-
-    .delivery-info {
-        padding: 0px;
-        width: 284px;
-        margin: 0px;
-      
-   
+  .phone-input{
+    background: none;
+    background-color: #f9fafb;
+    color: #333;
+    font-size: 1rem;
+    padding: 0.8rem;
+    display: block;
+    width: 100%;
+    border: 1px solid #ddd;
   }
 
+  h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
 
-    .Order-summary-container{
-      margin:25px;
-      display: flex;
-      flex-direction: column;
-      align-items:flex-start;
-      background-color: #fff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      max-width: 700px;
+  .order-type {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+
+    input {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .address {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #444;
+    }
+
+    span {
+      margin-left: 0;
+    }
+
+    input {
+      background: none;
+      background-color: #f9fafb;
+      color: #333;
+      font-size: 1rem;
+      padding: 0.8rem;
+      display: block;
       width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-bottom: 0.8rem;
+
+      &:focus {
+        outline: none;
+        border-color: #333;
+      }
+
+      &:focus ~ .form-input-label {
+        @include shrinkLabel();
+      }
     }
-    
+
+    input[type='password'] {
+      letter-spacing: 0.3em;
+    }
   }
+
+  .date,
+  .time {
+    margin: 1.5rem 0;
+
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1rem;
+      color: #333;
+    }
+  }
+
+  button {
+    color: #fff;
+    border-radius: 8px;
+    background: #000;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .delivery-info {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .Order-summary-container {
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}

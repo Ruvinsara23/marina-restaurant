@@ -1,4 +1,39 @@
-.checkout-container{
-    display: flex;
-    flex-wrap: wrap;
-}
+.checkout-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 1200px;
+  
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+  }
+  
+  .payment-details-scrollable {
+    max-height: 900px;
+    overflow-y: auto;
+    padding-right: 1rem; // Optional: Add padding for better scrollbar spacing
+
+   
+    
+    
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: #00bcd4;
+      border-radius: 4px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .checkout-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

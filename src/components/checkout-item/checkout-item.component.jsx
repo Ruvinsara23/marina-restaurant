@@ -23,7 +23,7 @@ const CheckoutItem = ({ cartItem }) => {
       </div>
       <div className="item-details">
         <span className="item-name">{name}</span>
-        <span className="item-price">${price}</span>
+        <span className="item-price">Rs {price}</span>
         <span className="item-quantity">Quantity:
         <span onClick={removeItemHandler}>-</span>
         {quantity}
