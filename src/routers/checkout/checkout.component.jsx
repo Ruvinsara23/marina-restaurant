@@ -10,7 +10,7 @@ const CheckOut = () => {
   const { currentUser } = useContext(UserContext);
 
   useEffect(() => {
-    if (currentUser) {
+    if (!currentUser) {
       navigate('/sign-in');
     }
   }, [currentUser,  navigate]);

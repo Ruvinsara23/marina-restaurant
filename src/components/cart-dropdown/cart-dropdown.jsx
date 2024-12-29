@@ -50,7 +50,7 @@ const CartDropdown = () => {
 )}
     </div>
     {cartItems.length > 0 && (
-      <button onClick={goToCheckouthandler}>GO TO CHECKOUT</button>
+      <button onClick={goToCheckouthandler}>Go To CheckOut</button>
     )}
     </div>
     
