@@ -1,29 +1,108 @@
+.footer {
+  background-color: #ffffff;
+  color: #333;
 
+  .footer-container {
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 2.5rem 1rem;
 
-footer{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background:#000a06;
-  color: white;
-  padding: 3em;
-  text-align: start;
-  justify-items: center;
-  a{
-    color: white;
-    font-size: 1.5em;
-    margin: 1em;
-    font-weight: bolder;
-  }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
 
-  .logo{
-    width: 60px;
-    height: 60px;
-  }
-  .footer-column{
-    display: flex;
-    gap: 30px;
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .footer-logo h2 {
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: #000;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        
+
+        li a {
+          text-decoration: none;
+          color: #333;
+          transition: color 0.3s;
+         margin-bottom: 10px;
+          
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+
+      .footer-contact,
+      .footer-newsletter {
+        h3 {
+          font-size: 1.25rem;
+          font-weight: bold;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          input {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+          }
+
+          button {
+            background-color: #0a0a0a;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #0056b3;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+
+      .footer-social a {
+        margin-right: 1rem;
+        color: #333;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #000;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .footer-copyright {
+        font-size: 0.875rem;
+      }
+    }
   }
 }
-
