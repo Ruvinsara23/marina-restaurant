@@ -15,7 +15,7 @@ import { getFirestore, doc, getDoc, setDoc, } from 'firebase/firestore';
 import firebase from 'firebase/compat/app';import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBWa3fhXO_lspvcoKtnJoKdpokYLugiK5E",
+    apiKey:process.env.REACT_APP_FIREBASE_API_KEY,
     authDomain: "marina-restaurant.firebaseapp.com",
     projectId: "marina-restaurant",
     storageBucket: "marina-restaurant.appspot.com",
