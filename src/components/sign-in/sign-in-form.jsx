@@ -40,8 +40,8 @@ const SignInForm = () => {
         password
       );
       resetFormFields();
-      console.log(user)
-      console.log(setCurrentUser)
+      // console.log(user)
+      // console.log(setCurrentUser)
      
     
     } catch (error) {

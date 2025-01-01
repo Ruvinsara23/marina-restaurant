@@ -11,7 +11,7 @@ import {
  
 
 } from 'firebase/auth';
-import { getFirestore, doc, getDoc, setDoc, } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, setDoc,collection,where,query,getDocs,updateDoc } from 'firebase/firestore';
 import firebase from 'firebase/compat/app';import 'firebase/compat/firestore';
 
 const firebaseConfig = {
@@ -115,7 +115,38 @@ const firebaseConfig = {
 
   export const onAuthStateChangedListner=(callback)=>onAuthStateChanged(auth,callback)
 
+  export const updateUserProfileDetails= async (userID, updatedData) => {
+    try {
+     
+      const usersRef = collection(db, 'users');
+      const q = query(usersRef, where('userID', '==', userID));
+  
 
+      const querySnapshot = await getDocs(q);
+  
+      // 3. Check if the document exists
+      if (querySnapshot.empty) {
+        console.log('No matching documents.');
+        return { success: false, error: 'No matching documents found' };
+      }
+  
+  
+      const userDoc = querySnapshot.docs[0];
+      const userDocRef = doc(db, 'users', userDoc.id);
+  
+
+      const dataToUpdate = { ...updatedData};
+  
+      await updateDoc(userDocRef, dataToUpdate);
+  
+      console.log('User document updated successfully');
+      return { success: true };
+  
+    } catch (error) {
+      console.error('Error updating document: ', error);
+      return { success: false, error: error.message };
+    }
+  };
 
 
 

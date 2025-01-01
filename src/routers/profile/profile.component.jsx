@@ -84,56 +84,60 @@ console.log("This user duser",filteredUser)
       };
  
   return (
-    <div className='profle-order-container'>
-     
-      <div className='profile-container'>
-      <h1>Hi</h1>
-      {filteredUser && <h2>{filteredUser.displayName}</h2>}
-      <form onSubmit={handleSubmit}>
-
+    <div className='profle-order-container' >
+    <div className="profile-container">
+    <h1 className="profile-title">Your Profile</h1>
+    <form onSubmit={handleSubmit} className="profile-form">
       <label>Display Name</label>
-      <input 
-        type='text' 
-        value={displayName} 
-        required onChange={handleChange} 
-        name='displayName' 
-        placeholder={filteredUser ? filteredUser.displayName : ''} />
+      <input
+        type="text"
+        value={displayName}
+        required
+        onChange={handleChange}
+        name="displayName"
+        placeholder={filteredUser?.displayName || 'Enter your name'}
+      />
 
       <label>Email</label>
-      <input 
-      type='email'  
-      name='email' 
-      required onChange={handleChange} 
-      value={email}
-      placeholder={filteredUser ? filteredUser.email : ''}
-        />
-      <label>Adress</label>
-        <input 
-        type='text' 
-        value={address} 
-        required onChange={handleChange} 
-        name='address' 
-        placeholder={filteredUser ? filteredUser.address : ''}
-          />
-    <label>Phone Number</label>
-        <input 
-        type='number'  
-        name='phoneNumber' 
-        required onChange={handleChange} 
+      <input
+        type="email"
+        name="email"
+        required
+        onChange={handleChange}
+        value={email}
+        placeholder={filteredUser?.email || 'Enter your email'}
+      />
+
+      <label>Address</label>
+      <input
+        type="text"
+        value={address}
+        required
+        onChange={handleChange}
+        name="address"
+        placeholder={filteredUser?.address || 'Enter your address'}
+      />
+
+      <label>Phone Number</label>
+      <input
+        type="tel"
+        name="phoneNumber"
+        required
+        onChange={handleChange}
         value={phoneNumber}
-        placeholder={filteredUser ? filteredUser.phoneNumber : ''}
-          />
-    
-     
-      <div className='button-container'>
-      <button className='sign-up' type='submit'>Update</button>
+        placeholder={filteredUser?.phoneNumber || 'Enter your phone number'}
+      />
+
+      <button type="submit" className="update-button">
+        Update Profile
+      </button>
+    </form>
     </div>
-      </form>
-      </div>
     <div>
+    
+    </div>
     <OrderHistoryComponent />
-    </div>
-    </div>
+  </div>
   )
 }
 

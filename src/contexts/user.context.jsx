@@ -21,7 +21,7 @@ useEffect(()=>{
     createUserDocumentFromAuth(user);
     }
     setCurrentUser(user);
-    console.log("This is user",user);
+    // console.log("This is user",user);
    })
 
    return unsubscribe
