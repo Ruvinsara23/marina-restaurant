@@ -23,15 +23,17 @@ const OrderHistoryCard = ({order}) => {
         <OrderHistoryItem key={index} item={item} />
       ))}
    </div>
+ 
    <div className='order-price'>
-   <h3>Total:</h3>
-   <h4>{amount}</h4>
+   <label>Total:</label>
+   <label>{amount}</label>
    </div>
    <div className='order-price'>
-   <h3>status:</h3>
-   <h4>Complte</h4>
+   <label>status:</label>
+   <label>Complete</label>
    </div>
     </div>
+  
   </div>
   )
 }

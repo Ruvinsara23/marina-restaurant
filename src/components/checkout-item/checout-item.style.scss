@@ -17,18 +17,14 @@
       object-fit: cover;
 
     }
-    .deletebtn{
-
-      padding: 10px;
-     
-     
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-
-    }
+  
   }
-
+  
+  .deletebtn{
+    background-color: rgb(185, 244, 177);
+ border: 0px;
+ padding-right: 30px;
+  }
   .item-details {
     flex: 3;
     display: flex;

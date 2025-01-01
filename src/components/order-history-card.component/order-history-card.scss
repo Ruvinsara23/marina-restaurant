@@ -41,10 +41,7 @@
         font-weight: bold;
       }
 
-      .order-price{
-        display: flex;
-
-      }
+    
   
       .amount {
         font-size: 16px;
@@ -104,6 +101,11 @@
             color: #666;
           }
         }
+      }
+      .order-price{
+        margin:10px;
+        display: flex;
+
       }
      
 

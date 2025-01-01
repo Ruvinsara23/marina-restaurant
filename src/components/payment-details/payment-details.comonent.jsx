@@ -28,36 +28,35 @@ const PaymentDetails = ({ emailAddress, cardNumber, cardHolderName, subtotal, de
 
 const orderHistoryCollectionRef = collection(userDataCollection, currentUser.uid, 'orderHistory');
 
-      try {
+try {
 
-        const querySnapshot = await getDocs(orderHistoryCollectionRef);
-        let maxOrderId = 0;
-    
-      
-        querySnapshot.forEach((doc) => {
-          const data = doc.data();
-          if (data.orderId > maxOrderId) {
-            maxOrderId = data.orderId;
-          }
-        });
-    
-    
-        const newOrderId = maxOrderId + 1;
-    
+  const querySnapshot = await getDocs(orderHistoryCollectionRef);
+  let maxOrderId = 0;
 
-        const orderDetails = {
-          orderId: newOrderId,
-          amount: cartTotal,
-          items: cartItems,
-          timestamp: Date.now(),
-        };
-    
-    
-        await addDoc(orderHistoryCollectionRef, orderDetails);
-        console.log('New document added successfully!');
-      } catch (error) {
-        console.error('Error adding new document:', error);
-      }
+  querySnapshot.forEach((doc) => {
+    const data = doc.data();
+    const parsedOrderId = parseInt(data.orderId, 10); 
+    if (parsedOrderId > maxOrderId) {
+      maxOrderId = parsedOrderId;
+    }
+  });
+
+  const newOrderId = (maxOrderId + 1).toString(); 
+ 
+  const orderDetails = {
+    orderId: newOrderId, // Store as a string
+    amount: cartTotal + 150, // Adding delivery charges to total
+    items: cartItems,
+    timestamp: Date.now(),
+  };
+
+  // Add the new order to Firestore
+  await addDoc(orderHistoryCollectionRef, orderDetails);
+  console.log('New document added successfully!');
+  setShowPopup(true);
+} catch (error) {
+  console.error('Error adding new document:', error);
+}
 
       setShowPopup(!showPopup);
      

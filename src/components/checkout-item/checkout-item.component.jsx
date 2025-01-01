@@ -2,6 +2,7 @@ import { CartContext } from "../../contexts/cart.context";
 import { useContext } from "react";
 import './checout-item.style.scss'
 import delete1 from '../../assets/delete1.png'
+import { Trash2 } from 'lucide-react';
 
 
 
@@ -30,7 +31,9 @@ const CheckoutItem = ({ cartItem }) => {
         <span onClick={addItemHandler}>+</span>
         </span>
       </div>
-        <button  className="deletebtn"onClick={clearItemHandler}><img src={delete1} alt="abcd"  /></button>
+        <button className="deletebtn" onClick={clearItemHandler}>
+          <Trash2 />
+        </button>
     </div>
      
     );
